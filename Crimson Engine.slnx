@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Crimson Engine/Crimson Engine.vcxproj" Id="f6684af1-5c84-4a1f-9bc4-bfda32c04e4a" />
+</Solution>
