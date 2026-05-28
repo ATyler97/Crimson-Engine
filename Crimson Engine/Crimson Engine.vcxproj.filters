@@ -42,9 +42,6 @@
     <ClInclude Include="Main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Layer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="GraphicsLayerBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -123,12 +120,12 @@
     <ClInclude Include="Reflect_OverX.h">
       <Filter>Components\Graphics Transformations</Filter>
     </ClInclude>
+    <ClInclude Include="Layer.h">
+      <Filter>Components\Graphical Attribute Components</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Layer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GraphicsLayerBase.cpp">
@@ -196,6 +193,15 @@
     </ClCompile>
     <ClCompile Include="Scale_To.h">
       <Filter>Components\Graphics Transformations</Filter>
+    </ClCompile>
+    <ClCompile Include="Layer.cpp">
+      <Filter>Components\Graphical Attribute Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Comp_UI_BaseWindow.h">
+      <Filter>Components\Graphical Attribute Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Comp_Shape_Rectangle.cpp">
+      <Filter>Components\Graphical Attribute Components</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
