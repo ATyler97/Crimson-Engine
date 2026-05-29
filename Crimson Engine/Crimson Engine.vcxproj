@@ -175,6 +175,7 @@
     <ClCompile Include="Comp_NormalForce.h" />
     <ClCompile Include="Comp_Shape_Rectangle.cpp" />
     <ClCompile Include="Comp_Shape_Square.h" />
+    <ClCompile Include="Comp_UI_BaseWindow.cpp" />
     <ClCompile Include="Comp_UI_BaseWindow.h" />
     <ClCompile Include="Comp_XVelocity.h" />
     <ClCompile Include="Comp_YVelocity.h" />

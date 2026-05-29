@@ -3,12 +3,11 @@
 #include "Component.h"
 #include <vector>
 struct Comp_UI_BaseWindow{
-	SDL_Renderer* Render;
-	std::vector<SDL_Rect> Window;
+	Comp_Color ColorBase = Comp_Color(30, 30, 30, 256);
+	Comp_Color ColorTopBar = Comp_Color(221, 96, 49, 256);
+	Comp_Color ColorScrollBarPath = Comp_Color(56, 56, 56, 256);
+	Comp_Color ColorExitButton = Comp_Color(179, 57, 81, 256);
+	Comp_Color ColorScrollBar = Comp_Color(80, 80, 80, 256);
+	Comp_UI_BaseWindow(SDL_Renderer* Rend) ;
 	
-	//Window Body
-	Comp_Color BodyColor = Comp_Color(25, 25, 25, 255);
-	Comp_Color* BodyColorPTR;
-	Comp_Shape_Rectangle WindowBody = Comp_Shape_Rectangle(0, 0, 640, 480, Render, BodyColorPTR);
-	Comp_UI_BaseWindow(SDL_Renderer* Rend) { Render = Rend; };
 };

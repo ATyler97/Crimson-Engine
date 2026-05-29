@@ -4,7 +4,7 @@ struct Settings {
 	
 	//Graphics related settings
 	int WindowWidth = 800;
-	int WindowHeight = 600;
+	int WindowHeight = 640;
 	const char* WindowTitle = "My Game";
 	bool Fullscreen = false;
 	bool FullscreenDesktop = false;

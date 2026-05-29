@@ -8,10 +8,10 @@
 #include <iostream>
 #include "Settings.h"
 
-InputSystem Input;
-GraphicsSystem Graphics;
-LogicSystem Logic;
-SoundSystem Sound;
+InputSystem Input = InputSystem();
+GraphicsSystem Graphics = GraphicsSystem();
+LogicSystem Logic = LogicSystem();
+SoundSystem Sound = SoundSystem();
 
 InputSystem* InputPtr = &Input;
 LogicSystem* LogicPtr = &Logic;

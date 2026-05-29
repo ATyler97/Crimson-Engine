@@ -203,6 +203,9 @@
     <ClCompile Include="Comp_Shape_Rectangle.cpp">
       <Filter>Components\Graphical Attribute Components</Filter>
     </ClCompile>
+    <ClCompile Include="Comp_UI_BaseWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Crimson Engine.rc">
