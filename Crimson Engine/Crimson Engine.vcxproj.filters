@@ -37,6 +37,9 @@
     <Filter Include="Components\Physical Attribute Components\Physics Transformations">
       <UniqueIdentifier>{ab80d675-4add-4889-8ea8-6f6f64dd6192}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Components\Graphical Attribute Components\UI Elements">
+      <UniqueIdentifier>{9b625506-0136-4573-b806-b718042e4020}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h">
@@ -84,12 +87,6 @@
     <ClInclude Include="Entity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Comp_Color.h">
-      <Filter>Components\Graphical Attribute Components</Filter>
-    </ClInclude>
-    <ClInclude Include="Comp_Texture_Cordinates.h">
-      <Filter>Components\Graphical Attribute Components</Filter>
-    </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -114,14 +111,26 @@
     <ClInclude Include="Comp_Primitive.h">
       <Filter>Components\Physical Attribute Components\Object Component</Filter>
     </ClInclude>
-    <ClInclude Include="Comp_Shape_Rectangle.h">
-      <Filter>Components\Graphical Attribute Components</Filter>
-    </ClInclude>
     <ClInclude Include="Reflect_OverX.h">
       <Filter>Components\Graphics Transformations</Filter>
     </ClInclude>
     <ClInclude Include="Layer.h">
       <Filter>Components\Graphical Attribute Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Comp_Color.h">
+      <Filter>Components\Graphical Attribute Components\UI Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="Comp_Shape_Rectangle.h">
+      <Filter>Components\Graphical Attribute Components\UI Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="Comp_Texture_Cordinates.h">
+      <Filter>Components\Graphical Attribute Components\UI Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="Comp_UI_Button.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EventManagerSystem.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -182,12 +191,6 @@
     <ClCompile Include="Comp_LocalVertices2D.h">
       <Filter>Components\Physical Attribute Components\Object Component</Filter>
     </ClCompile>
-    <ClCompile Include="Comp_Shape_Square.h">
-      <Filter>Components\Graphical Attribute Components</Filter>
-    </ClCompile>
-    <ClCompile Include="Comp_Effect_Outline.h">
-      <Filter>Components\Graphical Attribute Components</Filter>
-    </ClCompile>
     <ClCompile Include="Move_To.h">
       <Filter>Components\Graphics Transformations</Filter>
     </ClCompile>
@@ -198,12 +201,24 @@
       <Filter>Components\Graphical Attribute Components</Filter>
     </ClCompile>
     <ClCompile Include="Comp_UI_BaseWindow.h">
-      <Filter>Components\Graphical Attribute Components</Filter>
+      <Filter>Components\Graphical Attribute Components\UI Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="Comp_Effect_Outline.h">
+      <Filter>Components\Graphical Attribute Components\UI Elements</Filter>
     </ClCompile>
     <ClCompile Include="Comp_Shape_Rectangle.cpp">
-      <Filter>Components\Graphical Attribute Components</Filter>
+      <Filter>Components\Graphical Attribute Components\UI Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="Comp_Shape_Square.h">
+      <Filter>Components\Graphical Attribute Components\UI Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="Comp_UI_Button.cpp">
+      <Filter>Components\Graphical Attribute Components\UI Elements</Filter>
     </ClCompile>
     <ClCompile Include="Comp_UI_BaseWindow.cpp">
+      <Filter>Components\Graphical Attribute Components\UI Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="EventManagerSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

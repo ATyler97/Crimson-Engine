@@ -5,7 +5,7 @@
 class Loop : public SystemBase
 {
 	public:
-		void Start();
+		void Start(bool* State);
 		void Stop();
 		void InsertSystemsIntoLoop(std::vector<SystemBase*> systemsVector);
 };

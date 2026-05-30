@@ -5,6 +5,8 @@
 #include <iostream>
 #include <SDL2/SDL.h>
 
+bool Running;
+bool* RunningPtr = &Running;
 Loop EngineLoop;
 SystemManager SManager;
 Settings GameSettings;
@@ -17,11 +19,11 @@ void Application::Start()
 	SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO | SDL_INIT_TIMER);
 
 	std::cout << std::endl << "Application | Start() | 'Beginning System Initialization' " << std::endl;
-	SManager.InitializeSystems(GameSettingsPtr);
+	SManager.InitializeSystems(GameSettingsPtr,RunningPtr);
 
 	std::cout << std::endl << "Application | Start() | 'Beginning Systems Insertion into Loop' " << std::endl;
 	EngineLoop.InsertSystemsIntoLoop(SManager.ReturnSystems());	
 
 	std::cout << std::endl << "Application | Start() | 'Starting Engine Loop' " << std::endl;
-	EngineLoop.Start();
+	EngineLoop.Start(RunningPtr);
 }

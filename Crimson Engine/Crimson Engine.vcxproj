@@ -144,9 +144,11 @@
     <ClInclude Include="Component.h" />
     <ClInclude Include="Comp_Gravity.h" />
     <ClInclude Include="Comp_LocalVertices3D.h" />
+    <ClInclude Include="Comp_UI_Button.h" />
     <ClInclude Include="Comp_Weight.h" />
     <ClInclude Include="Comp_ZVelocity.h" />
     <ClInclude Include="Entity.h" />
+    <ClInclude Include="EventManagerSystem.h" />
     <ClInclude Include="Layer.h" />
     <ClInclude Include="GraphicsLayerBase.h" />
     <ClInclude Include="GraphicsSystem.h" />
@@ -177,8 +179,10 @@
     <ClCompile Include="Comp_Shape_Square.h" />
     <ClCompile Include="Comp_UI_BaseWindow.cpp" />
     <ClCompile Include="Comp_UI_BaseWindow.h" />
+    <ClCompile Include="Comp_UI_Button.cpp" />
     <ClCompile Include="Comp_XVelocity.h" />
     <ClCompile Include="Comp_YVelocity.h" />
+    <ClCompile Include="EventManagerSystem.cpp" />
     <ClCompile Include="Layer.cpp" />
     <ClCompile Include="GraphicsLayerBase.cpp" />
     <ClCompile Include="GraphicsSystem.cpp" />

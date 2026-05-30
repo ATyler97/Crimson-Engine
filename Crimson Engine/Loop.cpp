@@ -7,15 +7,14 @@ using namespace std;
 
 
 vector<SystemBase*> systems;
-bool LoopRunning = true;
 int64_t CurrentTime;
 int64_t DeltaTime;
 int64_t PreviousTime;
 
-void Loop::Start() {
+void Loop::Start(bool* state) {
 	std::cout <<"\tLoop | Start() | 'Starting Engine Loop' " << std::endl;
 	
-	while (LoopRunning) {
+	while (state) {
 		CurrentTime = SDL_GetTicks64();
 		DeltaTime = CurrentTime - PreviousTime;
 		PreviousTime = CurrentTime;
@@ -29,12 +28,6 @@ void Loop::Start() {
 		std::cout << "\tLoop | Start() | 'Previous Time: " << PreviousTime << "' " << std::endl;
 	}
 }
-
-void Loop::Stop(){
-	std::cout << "\tLoop | Stop() | 'Stopping Engine Loop' " << std::endl;
-	LoopRunning = false;
-}
-
 void Loop::InsertSystemsIntoLoop(std::vector<SystemBase*> systemsVector) {
 	std::cout << "\tLoop | InsertSystemsIntoLoop() | 'Inserting systems into loop' " << std::endl;
 	systems = systemsVector;

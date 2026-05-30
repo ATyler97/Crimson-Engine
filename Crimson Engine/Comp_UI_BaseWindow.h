@@ -1,7 +1,6 @@
 #include "Comp_Shape_Rectangle.h"
 #include <SDL2/SDL.h>
 #include "Component.h"
-#include <vector>
 struct Comp_UI_BaseWindow{
 	Comp_Color ColorBase = Comp_Color(30, 30, 30, 256);
 	Comp_Color ColorTopBar = Comp_Color(221, 96, 49, 256);
