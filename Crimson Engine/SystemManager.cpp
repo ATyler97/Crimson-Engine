@@ -20,16 +20,16 @@ EventManagerSystem* EventsPtr = &Events;
 LogicSystem* LogicPtr = &Logic;
 SoundSystem* SoundPtr = &Sound;
 GraphicsSystem* GraphicsPtr = &Graphics;
-std::vector <SystemBase*> Systems = { InputPtr,EventsPtr, LogicPtr, GraphicsPtr, SoundPtr };
+std::vector <SystemBase*> Systems = { InputPtr, EventsPtr, LogicPtr, GraphicsPtr, SoundPtr };
 
 
 void SystemManager::InitializeSystems(Settings* gameSettings ,bool* LoopStateptr)
 {
 	std::cout << "\tSystemManager | InitializingSystems() | 'Initializing all systems' " << std::endl;
 	Graphics.Initialize(gameSettings);
-	Events.Initialize(LoopStateptr);
-	Logic.Initialize();
 	Input.Initialize();
+	Events.Initialize(LoopStateptr, InputPtr);
+	Logic.Initialize();
 	Sound.Initialize();
 }
 

@@ -1,5 +1,6 @@
 #pragma once
 #include "SystemBase.h"
+#include "InputSystem.h"
 #include <SDL2/SDL.h>
 #include <String>
 
@@ -7,7 +8,8 @@
 class EventManagerSystem : public SystemBase
 {
 	public:
-		void CarryoutEvent(SDL_Event e,std::string ID);
-		void Initialize(bool* LoopState);
+		void Initialize(bool* LoopState, InputSystem* Inptr);
+		void CheckEvents();
+		void Update() override;
 };
 
