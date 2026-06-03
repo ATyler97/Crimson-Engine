@@ -1,6 +1,6 @@
 #include "Application.h"
-#include "Loop.h"
-#include "SystemManager.h"
+#include "System_Loop.h"
+#include "System_Manager.h"
 #include "Settings.h"
 #include <iostream>
 #include <SDL2/SDL.h>

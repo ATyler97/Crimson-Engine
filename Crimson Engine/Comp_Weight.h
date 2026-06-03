@@ -1,5 +1,5 @@
 #include "Component.h"
-struct Comp_Weight : public Component
+struct Comp_Weight
 {
 	// a weight value to be added to an entity. 
 	// the "unit" of this weight will be set as KG.

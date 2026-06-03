@@ -1,230 +1,230 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{d4296213-f762-4cfb-915c-ce284907bcb1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="Engine\Components">
+      <UniqueIdentifier>{b5d33348-9964-44a9-b85b-038443d2a1a0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
+    <Filter Include="Engine\Components\Physical Attribute Components">
+      <UniqueIdentifier>{142b03af-747a-45d3-b96f-14e7c921c8e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Components\Physical Attribute Components\Force Components">
+      <UniqueIdentifier>{11225eee-ad49-40cf-8d44-3a9c123b0924}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Components\Physical Attribute Components\Object Component">
+      <UniqueIdentifier>{b4dc6d4d-55d0-4df1-8709-26b806af286d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Components\Physical Attribute Components\Global Positional Components">
+      <UniqueIdentifier>{db04dda1-9d2f-4aeb-a5cd-b2398ddfa931}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Components\Physical Attribute Components\Physics Transformations">
+      <UniqueIdentifier>{ab80d675-4add-4889-8ea8-6f6f64dd6192}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Engine Foundation">
+      <UniqueIdentifier>{66ab5054-5c5a-4c58-a433-19f94aa9b665}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Engine Foundation\Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Components">
-      <UniqueIdentifier>{b5d33348-9964-44a9-b85b-038443d2a1a0}</UniqueIdentifier>
+    <Filter Include="Engine\Engine Foundation\Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="Components\Physical Attribute Components">
-      <UniqueIdentifier>{142b03af-747a-45d3-b96f-14e7c921c8e6}</UniqueIdentifier>
+    <Filter Include="Engine\Engine Foundation\Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Components\Graphical Attribute Components">
-      <UniqueIdentifier>{a42bdb39-d04a-45a0-a768-b781d76c05ec}</UniqueIdentifier>
+    <Filter Include="Engine\Systems">
+      <UniqueIdentifier>{8c1b2ccd-2e89-4c66-ac71-25ecd09b78d1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Components\Physical Attribute Components\Force Components">
-      <UniqueIdentifier>{11225eee-ad49-40cf-8d44-3a9c123b0924}</UniqueIdentifier>
+    <Filter Include="Engine\Graphics">
+      <UniqueIdentifier>{b3e10549-67d0-41aa-8cb9-af469b7c2300}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Components\Physical Attribute Components\Object Component">
-      <UniqueIdentifier>{b4dc6d4d-55d0-4df1-8709-26b806af286d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Components\Physical Attribute Components\Global Positional Components">
-      <UniqueIdentifier>{db04dda1-9d2f-4aeb-a5cd-b2398ddfa931}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Components\Graphics Transformations">
+    <Filter Include="Engine\Graphics\Graphics Transformations">
       <UniqueIdentifier>{182f7b99-2969-4ce5-b7b4-db344ac1de5d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Components\Physical Attribute Components\Physics Transformations">
-      <UniqueIdentifier>{ab80d675-4add-4889-8ea8-6f6f64dd6192}</UniqueIdentifier>
+    <Filter Include="Engine\Graphics\Graphics Elements">
+      <UniqueIdentifier>{a42bdb39-d04a-45a0-a768-b781d76c05ec}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Components\Graphical Attribute Components\UI Elements">
+    <Filter Include="Engine\Graphics\Graphics Elements\GUI Elements">
       <UniqueIdentifier>{9b625506-0136-4573-b806-b718042e4020}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Graphics\Graphics Elements\GUI Elements\GUI_Simple_Elements">
+      <UniqueIdentifier>{c3deac13-aff0-46ae-98dd-c0e3494f8442}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Graphics\Graphics Elements\GUI Elements\GUI_Simple_Window">
+      <UniqueIdentifier>{e38c20e1-7e89-49ca-8bee-d4b2fdeddec2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Graphics\Graphics Layers">
+      <UniqueIdentifier>{56a4d4ac-3fc5-4f80-abf6-f21e9b75c5d2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Main.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GraphicsLayerBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GraphicsSystem.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="InputSystem.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="KeyStruct.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Logger.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LogicSystem.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Loop.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Settings.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SoundSystem.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="System.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SystemBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SystemManager.h">
-      <Filter>Header Files</Filter>
+      <Filter>Engine\Engine Foundation\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Application.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Entity.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
+      <Filter>Engine\Engine Foundation\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Comp_Gravity.h">
-      <Filter>Components\Physical Attribute Components\Force Components</Filter>
+      <Filter>Engine\Components\Physical Attribute Components\Force Components</Filter>
     </ClInclude>
     <ClInclude Include="Comp_Weight.h">
-      <Filter>Components\Physical Attribute Components\Force Components</Filter>
+      <Filter>Engine\Components\Physical Attribute Components\Force Components</Filter>
     </ClInclude>
     <ClInclude Include="Comp_ZVelocity.h">
-      <Filter>Components\Physical Attribute Components\Force Components</Filter>
+      <Filter>Engine\Components\Physical Attribute Components\Force Components</Filter>
     </ClInclude>
     <ClInclude Include="Comp_Position3D.h">
-      <Filter>Components\Physical Attribute Components\Global Positional Components</Filter>
-    </ClInclude>
-    <ClInclude Include="Component.h">
-      <Filter>Components</Filter>
+      <Filter>Engine\Components\Physical Attribute Components\Global Positional Components</Filter>
     </ClInclude>
     <ClInclude Include="Comp_LocalVertices3D.h">
-      <Filter>Components\Physical Attribute Components\Object Component</Filter>
+      <Filter>Engine\Components\Physical Attribute Components\Object Component</Filter>
     </ClInclude>
     <ClInclude Include="Comp_Primitive.h">
-      <Filter>Components\Physical Attribute Components\Object Component</Filter>
+      <Filter>Engine\Components\Physical Attribute Components\Object Component</Filter>
     </ClInclude>
     <ClInclude Include="Reflect_OverX.h">
-      <Filter>Components\Graphics Transformations</Filter>
+      <Filter>Engine\Graphics\Graphics Transformations</Filter>
     </ClInclude>
-    <ClInclude Include="Layer.h">
-      <Filter>Components\Graphical Attribute Components</Filter>
+    <ClInclude Include="System_EventManager.h">
+      <Filter>Engine\Systems</Filter>
     </ClInclude>
-    <ClInclude Include="Comp_Color.h">
-      <Filter>Components\Graphical Attribute Components\UI Elements</Filter>
+    <ClInclude Include="System_Graphics.h">
+      <Filter>Engine\Systems</Filter>
     </ClInclude>
-    <ClInclude Include="Comp_Shape_Rectangle.h">
-      <Filter>Components\Graphical Attribute Components\UI Elements</Filter>
+    <ClInclude Include="System_Input.h">
+      <Filter>Engine\Systems</Filter>
     </ClInclude>
-    <ClInclude Include="Comp_Texture_Cordinates.h">
-      <Filter>Components\Graphical Attribute Components\UI Elements</Filter>
+    <ClInclude Include="System_Logic.h">
+      <Filter>Engine\Systems</Filter>
     </ClInclude>
-    <ClInclude Include="Comp_UI_Button.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="System_Sound.h">
+      <Filter>Engine\Systems</Filter>
     </ClInclude>
-    <ClInclude Include="EventManagerSystem.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="System_Base.h">
+      <Filter>Engine\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="System_Manager.h">
+      <Filter>Engine\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Main.h">
+      <Filter>Engine\Engine Foundation\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Engine\Engine Foundation\Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="System_Loop.h">
+      <Filter>Engine\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI_Color.h">
+      <Filter>Engine\Graphics\Graphics Elements\GUI Elements\GUI_Simple_Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI_Shape_Rectangle.h">
+      <Filter>Engine\Graphics\Graphics Elements\GUI Elements\GUI_Simple_Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI_Button.h">
+      <Filter>Engine\Graphics\Graphics Elements\GUI Elements\GUI_Simple_Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics_Stratum.h">
+      <Filter>Engine\Graphics\Graphics Layers</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Engine\Components</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GraphicsLayerBase.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GraphicsSystem.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="InputSystem.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Logger.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LogicSystem.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Loop.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Settings.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Sound.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="System.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SystemBase.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SystemManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Application.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ComponentBase.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Comp_NormalForce.h">
-      <Filter>Components\Physical Attribute Components\Force Components</Filter>
+      <Filter>Engine\Components\Physical Attribute Components\Force Components</Filter>
     </ClCompile>
     <ClCompile Include="Comp_XVelocity.h">
-      <Filter>Components\Physical Attribute Components\Force Components</Filter>
+      <Filter>Engine\Components\Physical Attribute Components\Force Components</Filter>
     </ClCompile>
     <ClCompile Include="Comp_YVelocity.h">
-      <Filter>Components\Physical Attribute Components\Force Components</Filter>
+      <Filter>Engine\Components\Physical Attribute Components\Force Components</Filter>
     </ClCompile>
     <ClCompile Include="Comp_Position2D.h">
-      <Filter>Components\Physical Attribute Components\Global Positional Components</Filter>
+      <Filter>Engine\Components\Physical Attribute Components\Global Positional Components</Filter>
     </ClCompile>
     <ClCompile Include="Comp_LocalVertices2D.h">
-      <Filter>Components\Physical Attribute Components\Object Component</Filter>
+      <Filter>Engine\Components\Physical Attribute Components\Object Component</Filter>
     </ClCompile>
     <ClCompile Include="Move_To.h">
-      <Filter>Components\Graphics Transformations</Filter>
+      <Filter>Engine\Graphics\Graphics Transformations</Filter>
     </ClCompile>
     <ClCompile Include="Scale_To.h">
-      <Filter>Components\Graphics Transformations</Filter>
+      <Filter>Engine\Graphics\Graphics Transformations</Filter>
     </ClCompile>
-    <ClCompile Include="Layer.cpp">
-      <Filter>Components\Graphical Attribute Components</Filter>
+    <ClCompile Include="System_EventManager.cpp">
+      <Filter>Engine\Systems</Filter>
     </ClCompile>
-    <ClCompile Include="Comp_UI_BaseWindow.h">
-      <Filter>Components\Graphical Attribute Components\UI Elements</Filter>
+    <ClCompile Include="System_Graphics.cpp">
+      <Filter>Engine\Systems</Filter>
     </ClCompile>
-    <ClCompile Include="Comp_Effect_Outline.h">
-      <Filter>Components\Graphical Attribute Components\UI Elements</Filter>
+    <ClCompile Include="System_Input.cpp">
+      <Filter>Engine\Systems</Filter>
     </ClCompile>
-    <ClCompile Include="Comp_Shape_Rectangle.cpp">
-      <Filter>Components\Graphical Attribute Components\UI Elements</Filter>
+    <ClCompile Include="System_Logic.cpp">
+      <Filter>Engine\Systems</Filter>
     </ClCompile>
-    <ClCompile Include="Comp_Shape_Square.h">
-      <Filter>Components\Graphical Attribute Components\UI Elements</Filter>
+    <ClCompile Include="System_Base.cpp">
+      <Filter>Engine\Systems</Filter>
     </ClCompile>
-    <ClCompile Include="Comp_UI_Button.cpp">
-      <Filter>Components\Graphical Attribute Components\UI Elements</Filter>
+    <ClCompile Include="System_Manager.cpp">
+      <Filter>Engine\Systems</Filter>
     </ClCompile>
-    <ClCompile Include="Comp_UI_BaseWindow.cpp">
-      <Filter>Components\Graphical Attribute Components\UI Elements</Filter>
+    <ClCompile Include="System_Sound.cpp">
+      <Filter>Engine\Systems</Filter>
     </ClCompile>
-    <ClCompile Include="EventManagerSystem.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="System_Loop.cpp">
+      <Filter>Engine\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>Engine\Engine Foundation\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Engine\Engine Foundation\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings.cpp">
+      <Filter>Engine\Engine Foundation\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI_Effect_Outline.h">
+      <Filter>Engine\Graphics\Graphics Elements\GUI Elements\GUI_Simple_Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI_Shape_Rectangle.cpp">
+      <Filter>Engine\Graphics\Graphics Elements\GUI Elements\GUI_Simple_Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI_Shape_Square.h">
+      <Filter>Engine\Graphics\Graphics Elements\GUI Elements\GUI_Simple_Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI_Base_Window.cpp">
+      <Filter>Engine\Graphics\Graphics Elements\GUI Elements\GUI_Simple_Window</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI_Base_Window.h">
+      <Filter>Engine\Graphics\Graphics Elements\GUI Elements\GUI_Simple_Window</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI_Button.cpp">
+      <Filter>Engine\Graphics\Graphics Elements\GUI Elements\GUI_Simple_Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics_Layer.h">
+      <Filter>Engine\Graphics\Graphics Layers</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI_Element.h">
+      <Filter>Engine\Graphics\Graphics Elements\GUI Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics_Stratum.cpp">
+      <Filter>Engine\Graphics\Graphics Layers</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics_Layer.cpp">
+      <Filter>Engine\Engine Foundation\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Crimson Engine.rc">
-      <Filter>Resource Files</Filter>
+      <Filter>Engine\Engine Foundation\Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
 </Project>
