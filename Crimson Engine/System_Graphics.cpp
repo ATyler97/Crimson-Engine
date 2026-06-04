@@ -46,7 +46,6 @@ void System_Graphics::DrawFrame() {
 }
 void System_Graphics::ProcessLayers() 
 {
-	GUI_Base_Window Window = GUI_Base_Window(RendererPtr);
 	SDL_RenderPresent(RendererPtr);
 	//SDL_Delay(10000);
 }

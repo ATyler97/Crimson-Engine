@@ -52,14 +52,11 @@
     <Filter Include="Engine\Graphics\Graphics Elements\GUI Elements">
       <UniqueIdentifier>{9b625506-0136-4573-b806-b718042e4020}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Graphics\Graphics Elements\GUI Elements\GUI_Simple_Elements">
-      <UniqueIdentifier>{c3deac13-aff0-46ae-98dd-c0e3494f8442}</UniqueIdentifier>
+    <Filter Include="Engine\Graphics\Graphics Elements\GUI_Layers">
+      <UniqueIdentifier>{4a1387f0-2740-4614-8302-04b905c3c550}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Graphics\Graphics Elements\GUI Elements\GUI_Simple_Window">
-      <UniqueIdentifier>{e38c20e1-7e89-49ca-8bee-d4b2fdeddec2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Graphics\Graphics Layers">
-      <UniqueIdentifier>{56a4d4ac-3fc5-4f80-abf6-f21e9b75c5d2}</UniqueIdentifier>
+    <Filter Include="Engine\Graphics\Graphics Elements\GUI_Layers\GUI_Layer">
+      <UniqueIdentifier>{c7e99f4e-44de-4fa1-9b2a-5d687983198b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -120,20 +117,23 @@
     <ClInclude Include="System_Loop.h">
       <Filter>Engine\Systems</Filter>
     </ClInclude>
-    <ClInclude Include="GUI_Color.h">
-      <Filter>Engine\Graphics\Graphics Elements\GUI Elements\GUI_Simple_Elements</Filter>
-    </ClInclude>
-    <ClInclude Include="GUI_Shape_Rectangle.h">
-      <Filter>Engine\Graphics\Graphics Elements\GUI Elements\GUI_Simple_Elements</Filter>
-    </ClInclude>
-    <ClInclude Include="GUI_Button.h">
-      <Filter>Engine\Graphics\Graphics Elements\GUI Elements\GUI_Simple_Elements</Filter>
-    </ClInclude>
-    <ClInclude Include="Graphics_Stratum.h">
-      <Filter>Engine\Graphics\Graphics Layers</Filter>
-    </ClInclude>
     <ClInclude Include="Component.h">
       <Filter>Engine\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI_Element_Position.h">
+      <Filter>Engine\Graphics\Graphics Elements\GUI Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI_Element_Color.h">
+      <Filter>Engine\Graphics\Graphics Elements\GUI Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI_Element_Shape.h">
+      <Filter>Engine\Graphics\Graphics Elements\GUI Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI_Body.h">
+      <Filter>Engine\Graphics\Graphics Elements\GUI_Layers</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI_Bodies_Prefabs.h">
+      <Filter>Engine\Graphics\Graphics Elements\GUI_Layers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -191,35 +191,23 @@
     <ClCompile Include="Settings.cpp">
       <Filter>Engine\Engine Foundation\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GUI_Effect_Outline.h">
-      <Filter>Engine\Graphics\Graphics Elements\GUI Elements\GUI_Simple_Elements</Filter>
-    </ClCompile>
-    <ClCompile Include="GUI_Shape_Rectangle.cpp">
-      <Filter>Engine\Graphics\Graphics Elements\GUI Elements\GUI_Simple_Elements</Filter>
-    </ClCompile>
-    <ClCompile Include="GUI_Shape_Square.h">
-      <Filter>Engine\Graphics\Graphics Elements\GUI Elements\GUI_Simple_Elements</Filter>
-    </ClCompile>
-    <ClCompile Include="GUI_Base_Window.cpp">
-      <Filter>Engine\Graphics\Graphics Elements\GUI Elements\GUI_Simple_Window</Filter>
-    </ClCompile>
-    <ClCompile Include="GUI_Base_Window.h">
-      <Filter>Engine\Graphics\Graphics Elements\GUI Elements\GUI_Simple_Window</Filter>
-    </ClCompile>
-    <ClCompile Include="GUI_Button.cpp">
-      <Filter>Engine\Graphics\Graphics Elements\GUI Elements\GUI_Simple_Elements</Filter>
-    </ClCompile>
-    <ClCompile Include="Graphics_Layer.h">
-      <Filter>Engine\Graphics\Graphics Layers</Filter>
-    </ClCompile>
     <ClCompile Include="GUI_Element.h">
       <Filter>Engine\Graphics\Graphics Elements\GUI Elements</Filter>
     </ClCompile>
-    <ClCompile Include="Graphics_Stratum.cpp">
-      <Filter>Engine\Graphics\Graphics Layers</Filter>
-    </ClCompile>
     <ClCompile Include="Graphics_Layer.cpp">
       <Filter>Engine\Engine Foundation\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI_Element_Size.h">
+      <Filter>Engine\Graphics\Graphics Elements\GUI Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI_Element_Texture.cpp">
+      <Filter>Engine\Graphics\Graphics Elements\GUI Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI_Body_Manager.h">
+      <Filter>Engine\Graphics\Graphics Elements\GUI_Layers</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI_Body_Prefabs.cpp">
+      <Filter>Engine\Graphics\Graphics Elements\GUI_Layers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

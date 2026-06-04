@@ -5,7 +5,7 @@
 #include "GUI_Color.h"
 
 SDL_Rect r;
-SDL_Renderer* Rend = NULL;
+SDL_Renderer* Rend;
 GUI_Color* Colors; 
 
 GUI_Shape_Rectangle::GUI_Shape_Rectangle(int X,int Y,int W,int H, SDL_Renderer* Renderer, GUI_Color* Color)
@@ -17,8 +17,7 @@ GUI_Shape_Rectangle::GUI_Shape_Rectangle(int X,int Y,int W,int H, SDL_Renderer* 
 	Rend = Renderer;
 	Colors = Color;
 }
-
-void GUI_Shape_Rectangle::DrawRect()
+void GUI_Shape_Rectangle::Draw()
 {
 	SDL_SetRenderDrawColor(Rend, Colors->Red, Colors->Green, Colors->Blue, Colors->Alpha);
 	SDL_RenderFillRect(Rend, &r);

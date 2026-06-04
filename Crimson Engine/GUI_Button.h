@@ -16,7 +16,7 @@ class GUI_Button : public GUI_Element
 		GUI_Color Color = GUI_Color(0,0,0,0);
 		GUI_Shape_Rectangle ButtonGUI = GUI_Shape_Rectangle(ButtonXLoc,ButtonYLoc,ButtonWidth,ButtonHeight,Rend,&Color);
 	
-		GUI_Button(SDL_Renderer* Render){Rend = Render;};
+		GUI_Button(int X, int Y, int W, int H, SDL_Renderer* Render, std::string ID);
 		void CreateButton(int X, int Y, int W, int H,std::string ID);
 		std::string ButtonPressed();
 };

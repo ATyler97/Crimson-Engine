@@ -141,13 +141,15 @@
   <ItemGroup>
     <ClInclude Include="Application.h" />
     <ClInclude Include="Component.h" />
-    <ClInclude Include="Graphics_Stratum.h" />
-    <ClInclude Include="GUI_Color.h" />
     <ClInclude Include="Comp_Gravity.h" />
     <ClInclude Include="Comp_LocalVertices3D.h" />
-    <ClInclude Include="GUI_Button.h" />
     <ClInclude Include="Comp_Weight.h" />
     <ClInclude Include="Comp_ZVelocity.h" />
+    <ClInclude Include="GUI_Bodies_Prefabs.h" />
+    <ClInclude Include="GUI_Element_Color.h" />
+    <ClInclude Include="GUI_Element_Position.h" />
+    <ClInclude Include="GUI_Element_Shape.h" />
+    <ClInclude Include="GUI_Body.h" />
     <ClInclude Include="System_EventManager.h" />
     <ClInclude Include="System_Graphics.h" />
     <ClInclude Include="System_Input.h" />
@@ -162,23 +164,19 @@
     <ClInclude Include="System_Sound.h" />
     <ClInclude Include="System_Base.h" />
     <ClInclude Include="System_Manager.h" />
-    <ClInclude Include="GUI_Shape_Rectangle.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="Comp_LocalVertices2D.h" />
     <ClCompile Include="Comp_NormalForce.h" />
     <ClCompile Include="Graphics_Layer.cpp" />
-    <ClCompile Include="Graphics_Layer.h" />
-    <ClCompile Include="Graphics_Stratum.cpp" />
+    <ClCompile Include="GUI_Body_Prefabs.cpp" />
     <ClCompile Include="GUI_Element.h" />
-    <ClCompile Include="GUI_Shape_Rectangle.cpp" />
-    <ClCompile Include="GUI_Shape_Square.h" />
-    <ClCompile Include="GUI_Base_Window.cpp" />
-    <ClCompile Include="GUI_Base_Window.h" />
-    <ClCompile Include="GUI_Button.cpp" />
     <ClCompile Include="Comp_XVelocity.h" />
     <ClCompile Include="Comp_YVelocity.h" />
+    <ClCompile Include="GUI_Element_Size.h" />
+    <ClCompile Include="GUI_Element_Texture.cpp" />
+    <ClCompile Include="GUI_Body_Manager.h" />
     <ClCompile Include="System_EventManager.cpp" />
     <ClCompile Include="System_Graphics.cpp" />
     <ClCompile Include="System_Input.cpp" />
@@ -186,7 +184,6 @@
     <ClCompile Include="System_Loop.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Comp_Position2D.h" />
-    <ClCompile Include="GUI_Effect_Outline.h" />
     <ClCompile Include="Move_To.h" />
     <ClCompile Include="Scale_To.h" />
     <ClCompile Include="Settings.cpp" />

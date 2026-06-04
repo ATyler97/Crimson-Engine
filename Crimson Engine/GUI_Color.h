@@ -7,6 +7,7 @@ struct GUI_Color : GUI_Element
 	Uint8 Blue;
 	Uint8 Alpha;//opacity
 
+	GUI_Color();
 	GUI_Color(Uint8 red, Uint8 green, Uint8 blue, Uint8 alpha)
 	{
 		Red = red, Green = green, Blue = blue, Alpha = alpha;
