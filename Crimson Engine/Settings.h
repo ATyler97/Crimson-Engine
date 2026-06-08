@@ -1,4 +1,5 @@
 #pragma once
+#include <SDL2/SDL.h>
 struct Settings {
 	//Engine related settings
 	
@@ -17,4 +18,5 @@ struct Settings {
 	bool HardwareAcceleration = false;
 	bool SoftwareRenderer = false;
 	bool VSync = false;
+
 };

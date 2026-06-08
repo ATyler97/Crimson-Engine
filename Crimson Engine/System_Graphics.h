@@ -12,6 +12,7 @@ class System_Graphics : public System_Base
 		void DrawWindow();
 		void DrawFrame();
 		void InitializeRenderer();
+		void PassWindowAndRenderPointerToSettings();
 		void ProcessLayers();
 		
 		

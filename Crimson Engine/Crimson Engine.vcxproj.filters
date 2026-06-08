@@ -49,14 +49,14 @@
     <Filter Include="Engine\Graphics\Graphics Elements">
       <UniqueIdentifier>{a42bdb39-d04a-45a0-a768-b781d76c05ec}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Graphics\Graphics Elements\GUI Elements">
-      <UniqueIdentifier>{9b625506-0136-4573-b806-b718042e4020}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine\Graphics\Graphics Elements\GUI_Layers">
       <UniqueIdentifier>{4a1387f0-2740-4614-8302-04b905c3c550}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Graphics\Graphics Elements\GUI_Layers\GUI_Layer">
+    <Filter Include="Engine\Graphics\Graphics Elements\GUI_Layers\GUI_Layer_Prefabs">
       <UniqueIdentifier>{c7e99f4e-44de-4fa1-9b2a-5d687983198b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Graphics\Graphics Elements\GUI_Body">
+      <UniqueIdentifier>{84e8ac48-58ed-4344-a4c0-f4cab7160948}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -120,20 +120,29 @@
     <ClInclude Include="Component.h">
       <Filter>Engine\Components</Filter>
     </ClInclude>
-    <ClInclude Include="GUI_Element_Position.h">
-      <Filter>Engine\Graphics\Graphics Elements\GUI Elements</Filter>
+    <ClInclude Include="GUI_Body.h">
+      <Filter>Engine\Graphics\Graphics Elements\GUI_Body</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI_Layer.h">
+      <Filter>Engine\Graphics\Graphics Elements\GUI_Layers</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI_Layer_Manager.h">
+      <Filter>Engine\Graphics\Graphics Elements\GUI_Layers</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI_Element_Size.h">
+      <Filter>Engine\Graphics\Graphics Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI_Element.h">
+      <Filter>Engine\Graphics\Graphics Elements</Filter>
     </ClInclude>
     <ClInclude Include="GUI_Element_Color.h">
-      <Filter>Engine\Graphics\Graphics Elements\GUI Elements</Filter>
+      <Filter>Engine\Graphics\Graphics Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI_Element_Location.h">
+      <Filter>Engine\Graphics\Graphics Elements</Filter>
     </ClInclude>
     <ClInclude Include="GUI_Element_Shape.h">
-      <Filter>Engine\Graphics\Graphics Elements\GUI Elements</Filter>
-    </ClInclude>
-    <ClInclude Include="GUI_Body.h">
-      <Filter>Engine\Graphics\Graphics Elements\GUI_Layers</Filter>
-    </ClInclude>
-    <ClInclude Include="GUI_Bodies_Prefabs.h">
-      <Filter>Engine\Graphics\Graphics Elements\GUI_Layers</Filter>
+      <Filter>Engine\Graphics\Graphics Elements</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -191,22 +200,19 @@
     <ClCompile Include="Settings.cpp">
       <Filter>Engine\Engine Foundation\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GUI_Element.h">
-      <Filter>Engine\Graphics\Graphics Elements\GUI Elements</Filter>
+    <ClCompile Include="GUI_Layer_Window.h">
+      <Filter>Engine\Graphics\Graphics Elements\GUI_Layers\GUI_Layer_Prefabs</Filter>
     </ClCompile>
-    <ClCompile Include="Graphics_Layer.cpp">
-      <Filter>Engine\Engine Foundation\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GUI_Element_Size.h">
-      <Filter>Engine\Graphics\Graphics Elements\GUI Elements</Filter>
-    </ClCompile>
-    <ClCompile Include="GUI_Element_Texture.cpp">
-      <Filter>Engine\Graphics\Graphics Elements\GUI Elements</Filter>
+    <ClCompile Include="GUI_Layer_Window.cpp">
+      <Filter>Engine\Graphics\Graphics Elements\GUI_Layers\GUI_Layer_Prefabs</Filter>
     </ClCompile>
     <ClCompile Include="GUI_Body_Manager.h">
-      <Filter>Engine\Graphics\Graphics Elements\GUI_Layers</Filter>
+      <Filter>Engine\Graphics\Graphics Elements\GUI_Body</Filter>
     </ClCompile>
-    <ClCompile Include="GUI_Body_Prefabs.cpp">
+    <ClCompile Include="GUI_Body_Manager.cpp">
+      <Filter>Engine\Graphics\Graphics Elements\GUI_Body</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI_Layer_Manager.cpp">
       <Filter>Engine\Graphics\Graphics Elements\GUI_Layers</Filter>
     </ClCompile>
   </ItemGroup>

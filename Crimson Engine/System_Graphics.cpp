@@ -1,4 +1,5 @@
 #include "System_Graphics.h"
+#include "GUI_Layer.h"
 #include "GUI_Base_Window.h"
 #include <SDL2/SDL.h>
 #include "Settings.h"
@@ -9,10 +10,11 @@ int WindowHeight = 1200;
 const char* Title = "Default Title";
 SDL_Window* window;
 SDL_Renderer* RendererPtr;
+Settings* gameSettings;
+
 void System_Graphics::Initialize(Settings* gameSettings)
 {
 	std::cout << "\t\tGraphics System | Initialize() | 'Initializing Graphics system' " << std::endl;
-	int SDL_Init(SDL_INIT_EVERYTHING);
 	Title = gameSettings->WindowTitle;
 	WindowWidth = gameSettings->WindowWidth;
 	WindowHeight = gameSettings->WindowHeight;
@@ -46,13 +48,21 @@ void System_Graphics::DrawFrame() {
 }
 void System_Graphics::ProcessLayers() 
 {
+	SDL_RenderClear(RendererPtr);
+	//Hey bart do the thing
+
 	SDL_RenderPresent(RendererPtr);
 	//SDL_Delay(10000);
 }
+
 void System_Graphics::InitializeRenderer()
 {
 	std::cout << "\t\tGraphics System | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
 	RendererPtr = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 	SDL_SetRenderDrawColor(RendererPtr, 0, 0, 0, 256);
 	SDL_RenderClear(RendererPtr);
+}
+void System_Graphics::PassWindowAndRenderPointerToSettings() 
+{
+	
 }

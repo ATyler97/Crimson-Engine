@@ -1,8 +1,13 @@
-
 #pragma once
-#include <cstdint>
-struct GUI_Element_Size
+#include "GUI_Element.h"
+
+struct GUI_Element_Size : public GUI_Element
 {
-	int32_t Height;
-	int32_t Width;
+	ElementType TypeOfElement = Size;
+	uint8_t Width;
+	uint8_t Height;
+	GUI_Element_Size(uint8_t W, uint8_t H) {
+		Width = W;
+		Height = H;
+	};
 };
