@@ -11,6 +11,7 @@ public:
 		Location,
 		Shape,
 		Size,
+		Visibility,
 	};
 	ElementType TypeOfElement;
 	virtual ~GUI_Element() {};

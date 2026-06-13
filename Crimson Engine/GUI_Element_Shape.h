@@ -3,8 +3,8 @@
 
 struct GUI_Element_Shape : public GUI_Element
 {
-	ElementType TypeOfElement = Shape;
-	enum Shape_Type
+
+	enum class Shape_Type
 	{
 		Rectangle,
 		Rectangle_Filled,
@@ -13,14 +13,13 @@ struct GUI_Element_Shape : public GUI_Element
 		Triangle,
 		Triangle_Filled
 	};
+
 	Shape_Type TypeOfShape;
-	GUI_Element_Shape(Shape_Type shapeType) {
-		TypeOfShape = shapeType;
+
+	GUI_Element_Shape(Shape_Type type)
+		: TypeOfShape(type)
+	{
+		TypeOfElement = Shape;
 	}
-	void SetShapeType(Shape_Type shapeType) {
-		TypeOfShape = shapeType;
-	}
-	Shape_Type GetShapeType() {
-		return TypeOfShape;
-	}
+
 };

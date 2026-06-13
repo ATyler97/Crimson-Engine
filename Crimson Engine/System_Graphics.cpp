@@ -4,13 +4,15 @@
 #include <SDL2/SDL.h>
 #include "Settings.h"
 #include <iostream>
+#include "GUI_Graphics_Renderer.h"
 
 int WindowWidth = 1920;
 int WindowHeight = 1200;
 const char* Title = "Default Title";
 SDL_Window* window;
-SDL_Renderer* RendererPtr;
+SDL_Renderer* GUIRendererPtr;
 Settings* gameSettings;
+GUI_Graphics_Renderer GUI_Grap_Rend = GUI_Graphics_Renderer();
 
 void System_Graphics::Initialize(Settings* gameSettings)
 {
@@ -48,19 +50,22 @@ void System_Graphics::DrawFrame() {
 }
 void System_Graphics::ProcessLayers() 
 {
-	SDL_RenderClear(RendererPtr);
+	SDL_RenderClear(GUIRendererPtr);
 	//Hey bart do the thing
 
-	SDL_RenderPresent(RendererPtr);
+
+	GUI_Grap_Rend.RenderGUIGraphics(GUIRendererPtr);
+
+	SDL_RenderPresent(GUIRendererPtr);
 	//SDL_Delay(10000);
 }
 
 void System_Graphics::InitializeRenderer()
 {
 	std::cout << "\t\tGraphics System | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
-	RendererPtr = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
-	SDL_SetRenderDrawColor(RendererPtr, 0, 0, 0, 256);
-	SDL_RenderClear(RendererPtr);
+	GUIRendererPtr = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+	SDL_SetRenderDrawColor(GUIRendererPtr, 0, 0, 0, 256);
+	SDL_RenderClear(GUIRendererPtr);
 }
 void System_Graphics::PassWindowAndRenderPointerToSettings() 
 {
