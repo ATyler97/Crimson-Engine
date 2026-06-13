@@ -12,7 +12,7 @@ const char* Title = "Default Title";
 SDL_Window* window;
 SDL_Renderer* GUIRendererPtr;
 Settings* gameSettings;
-GUI_Graphics_Renderer GUI_Grap_Rend = GUI_Graphics_Renderer();
+GUI_Graphics_Renderer GUIRendptr = GUI_Graphics_Renderer();
 
 void System_Graphics::Initialize(Settings* gameSettings)
 {
@@ -53,8 +53,8 @@ void System_Graphics::ProcessLayers()
 	SDL_RenderClear(GUIRendererPtr);
 	//Hey bart do the thing
 
-
-	GUI_Grap_Rend.RenderGUIGraphics(GUIRendererPtr);
+	GUIRendptr.RenderObjectsToGUI(GUIRendererPtr);
+	
 
 	SDL_RenderPresent(GUIRendererPtr);
 	//SDL_Delay(10000);

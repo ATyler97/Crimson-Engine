@@ -8,10 +8,8 @@ struct GUI_Element_Shape : public GUI_Element
 	{
 		Rectangle,
 		Rectangle_Filled,
-		Circle,
-		Circle_Filled,
-		Triangle,
-		Triangle_Filled
+		Line,
+		Point,
 	};
 
 	Shape_Type TypeOfShape;

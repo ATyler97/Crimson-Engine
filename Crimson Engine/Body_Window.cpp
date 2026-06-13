@@ -1,24 +1,62 @@
-
 #include "Body_Window.h"
-GUI_Body WB = GUI_Body();
 
-static void InstanceBodyWindow(){
-
-	GUI_Body Window_Body = GUI_Body();
-
-	Window_Body.Color = GUI_Element_Color(255, 255, 255, 255);
-	Window_Body.Location = GUI_Element_Location(0, 0);
-	Window_Body.Size = GUI_Element_Size(0, 0);
-	Window_Body.Shape = GUI_Element_Shape(GUI_Element_Shape::Shape_Type::Rectangle_Filled);
-	WB = Window_Body;
-}
+std::vector<GUI_Body> window = std::vector<GUI_Body>();
 
 Body_Window::Body_Window()
 {
-	InstanceBodyWindow();
+	InstanceWindow();
 }
 
-GUI_Body Body_Window::GetBodyWindow()
+std::vector<GUI_Body> Body_Window::GetVectorWindow()
 {
-	return WB;
+	return window;
+}
+
+
+void Body_Window::InstanceWindow()
+{
+	std::vector<GUI_Body> Window;
+
+	GUI_Body Body = GUI_Body();
+	GUI_Body TopBar = GUI_Body();
+	GUI_Body Exit = GUI_Body();
+	GUI_Body SliderBar = GUI_Body();
+	GUI_Body Slider = GUI_Body();
+
+	Body.Color = GUI_Element_Color(25, 25, 25, 0);
+	Body.Location = GUI_Element_Location(0, 0);
+	Body.Size = GUI_Element_Size(640, 480);
+	Body.Shape = GUI_Element_Shape(GUI_Element_Shape::Shape_Type::Rectangle_Filled);
+	Body.Visibility = GUI_Element_Visibility(255);
+	Window.push_back(Body);
+
+	TopBar.Color = GUI_Element_Color(221, 96, 49, 0);
+	TopBar.Location = GUI_Element_Location(0, 0);
+	TopBar.Size = GUI_Element_Size(620, 20);
+	TopBar.Shape = GUI_Element_Shape(GUI_Element_Shape::Shape_Type::Rectangle_Filled);
+	TopBar.Visibility = GUI_Element_Visibility(255);
+	Window.push_back(TopBar);
+
+	Exit.Color = GUI_Element_Color(179, 57, 81, 0);
+	Exit.Location = GUI_Element_Location(620, 0);
+	Exit.Size = GUI_Element_Size(20, 20);
+	Exit.Shape = GUI_Element_Shape(GUI_Element_Shape::Shape_Type::Rectangle_Filled);
+	Exit.Visibility = GUI_Element_Visibility(255);
+	Window.push_back(Exit);
+
+	SliderBar.Color = GUI_Element_Color(56, 56, 56, 0);
+	SliderBar.Location = GUI_Element_Location(620, 20);
+	SliderBar.Size = GUI_Element_Size(20, 460);
+	SliderBar.Shape = GUI_Element_Shape(GUI_Element_Shape::Shape_Type::Rectangle_Filled);
+	SliderBar.Visibility = GUI_Element_Visibility(255);
+	Window.push_back(SliderBar);
+
+	Slider.Color = GUI_Element_Color(80, 80, 80, 0);
+	Slider.Location = GUI_Element_Location(623, 23);
+	Slider.Size = GUI_Element_Size(13, 60);
+	Slider.Shape = GUI_Element_Shape(GUI_Element_Shape::Shape_Type::Rectangle_Filled);
+	Slider.Visibility = GUI_Element_Visibility(255);
+	Window.push_back(Slider);
+
+	window = Window;
 }

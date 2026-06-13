@@ -146,7 +146,6 @@
     <ClInclude Include="Comp_LocalVertices3D.h" />
     <ClInclude Include="Comp_Weight.h" />
     <ClInclude Include="Comp_ZVelocity.h" />
-    <ClInclude Include="GUI Notes.h" />
     <ClInclude Include="GUI_Body.h" />
     <ClInclude Include="GUI_Element.h" />
     <ClInclude Include="GUI_Element_Color.h" />
@@ -154,7 +153,6 @@
     <ClInclude Include="GUI_Element_Shape.h" />
     <ClInclude Include="GUI_Element_Size.h" />
     <ClInclude Include="GUI_Graphics_Renderer.h" />
-    <ClInclude Include="GUI_Layer.h" />
     <ClInclude Include="GUI_Scene.h" />
     <ClInclude Include="System_EventManager.h" />
     <ClInclude Include="System_Graphics.h" />

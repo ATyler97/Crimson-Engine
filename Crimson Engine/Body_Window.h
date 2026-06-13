@@ -5,5 +5,8 @@
 struct Body_Window 
 {
 	Body_Window();
-	GUI_Body GetBodyWindow();
+	std::vector<GUI_Body> GetVectorWindow();
+
+	static void InstanceWindow();
+
 };

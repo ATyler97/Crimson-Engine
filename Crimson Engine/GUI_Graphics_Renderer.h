@@ -11,16 +11,10 @@ class GUI_Graphics_Renderer
 {
 	public:
 		GUI_Graphics_Renderer();
-		void RenderGUIGraphics(SDL_Renderer* rend);
-		void RenderBody(SDL_Renderer* rend, GUI_Body Body, std::string Type);
-		//void CreateRenderObject(SDL_Renderer* rend,GUI_Body Body);
-		void InjectBodyIntoRendererForTesting();
-
-
-		void AddBodyToLayer(GUI_Body BodyToAdd, GUI_Layer LayerBeingAddedTo);
-		void AddLayerToScene(GUI_Layer LayerToAdd, GUI_Scene SceneBeingAddedTo);
-		void CreateNewLayer(std::string NameOfLayer);
-	
-		int GetActiveSceneLayerCount();
-		int GetActiveBodies();
+		void AddBodyToScene(GUI_Body BodyToAdd);
+		void AddBodiesToScene(std::vector<GUI_Body> BodyVectorToAdd);
+		void RenderObjectsToGUI(SDL_Renderer* rend);
+		void DetermineShapeAndRender(SDL_Renderer* rend, GUI_Body BodyToAdd);
+		void PopulateBody(GUI_Body Body);
 };
+

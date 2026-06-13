@@ -49,9 +49,6 @@
     <Filter Include="Engine\Graphics\GUI Graphics">
       <UniqueIdentifier>{a42bdb39-d04a-45a0-a768-b781d76c05ec}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Graphics\GUI Graphics\GUI_Layers">
-      <UniqueIdentifier>{4a1387f0-2740-4614-8302-04b905c3c550}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine\Graphics\GUI Graphics\GUI_Body">
       <UniqueIdentifier>{84e8ac48-58ed-4344-a4c0-f4cab7160948}</UniqueIdentifier>
     </Filter>
@@ -63,9 +60,6 @@
     </Filter>
     <Filter Include="Engine\Graphics\GUI Graphics\GUI_Scene">
       <UniqueIdentifier>{febf0691-374d-4b7f-9059-26b7e4a7eb6f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Graphics\GUI Graphics\GUI_Layers\GUI_Layer_Prefab">
-      <UniqueIdentifier>{8a5a9a5c-bb71-46c8-85c5-65555e35a1f8}</UniqueIdentifier>
     </Filter>
     <Filter Include="Engine\Graphics\GUI Graphics\GUI_Scene\GUI_Scene_Prefab">
       <UniqueIdentifier>{3846d532-f843-4223-a251-eae35889a3ff}</UniqueIdentifier>
@@ -135,9 +129,6 @@
     <ClInclude Include="GUI_Body.h">
       <Filter>Engine\Graphics\GUI Graphics\GUI_Body</Filter>
     </ClInclude>
-    <ClInclude Include="GUI_Layer.h">
-      <Filter>Engine\Graphics\GUI Graphics\GUI_Layers</Filter>
-    </ClInclude>
     <ClInclude Include="Body_Window.h">
       <Filter>Engine\Graphics\GUI Graphics\GUI_Body\GUI_Body_Prefab</Filter>
     </ClInclude>
@@ -158,9 +149,6 @@
     </ClInclude>
     <ClInclude Include="GUI_Scene.h">
       <Filter>Engine\Graphics\GUI Graphics\GUI_Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="GUI Notes.h">
-      <Filter>Engine\Graphics\GUI Graphics</Filter>
     </ClInclude>
     <ClInclude Include="GUI_Graphics_Renderer.h">
       <Filter>Engine\Graphics\GUI Graphics</Filter>
