@@ -12,6 +12,7 @@ public:
 		Shape,
 		Size,
 		Visibility,
+		EventArea,
 	};
 	ElementType TypeOfElement;
 	virtual ~GUI_Element() {};

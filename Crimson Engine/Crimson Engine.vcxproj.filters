@@ -64,6 +64,9 @@
     <Filter Include="Engine\Graphics\GUI Graphics\GUI_Scene\GUI_Scene_Prefab">
       <UniqueIdentifier>{3846d532-f843-4223-a251-eae35889a3ff}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\States">
+      <UniqueIdentifier>{0941fb34-a578-4732-97a2-9a1a2e2ec879}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Settings.h">
@@ -156,6 +159,12 @@
     <ClInclude Include="GUI_Element_Visibility.h">
       <Filter>Engine\Graphics\GUI Graphics\GUI_Elements</Filter>
     </ClInclude>
+    <ClInclude Include="GUI_Element_EventArea.h">
+      <Filter>Engine\Graphics\GUI Graphics\GUI_Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="States.h">
+      <Filter>Engine\States</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Comp_NormalForce.h">
@@ -173,7 +182,7 @@
     <ClCompile Include="Comp_LocalVertices2D.h">
       <Filter>Engine\Components\Physical Attribute Components\Object Component</Filter>
     </ClCompile>
-    <ClCompile Include="Move_To.h">
+    <ClCompile Include="Graphics_Transformations_MoveTo.h">
       <Filter>Engine\Graphics\Graphics Transformations</Filter>
     </ClCompile>
     <ClCompile Include="Scale_To.h">
@@ -217,6 +226,9 @@
     </ClCompile>
     <ClCompile Include="GUI_Graphics_Renderer.cpp">
       <Filter>Engine\Graphics\GUI Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="States.cpp">
+      <Filter>Engine\States</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -4,6 +4,7 @@
 #include <vector>
 #include <SDL2/SDL.h>
 
+
 class System_Input : public System_Base
 {
 	public:

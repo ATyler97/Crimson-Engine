@@ -150,10 +150,12 @@
     <ClInclude Include="GUI_Element.h" />
     <ClInclude Include="GUI_Element_Color.h" />
     <ClInclude Include="GUI_Element_Location.h" />
+    <ClInclude Include="GUI_Element_EventArea.h" />
     <ClInclude Include="GUI_Element_Shape.h" />
     <ClInclude Include="GUI_Element_Size.h" />
     <ClInclude Include="GUI_Graphics_Renderer.h" />
     <ClInclude Include="GUI_Scene.h" />
+    <ClInclude Include="States.h" />
     <ClInclude Include="System_EventManager.h" />
     <ClInclude Include="System_Graphics.h" />
     <ClInclude Include="System_Input.h" />
@@ -178,6 +180,7 @@
     <ClCompile Include="Comp_XVelocity.h" />
     <ClCompile Include="Comp_YVelocity.h" />
     <ClCompile Include="GUI_Graphics_Renderer.cpp" />
+    <ClCompile Include="States.cpp" />
     <ClCompile Include="System_EventManager.cpp" />
     <ClCompile Include="System_Graphics.cpp" />
     <ClCompile Include="System_Input.cpp" />
@@ -185,7 +188,7 @@
     <ClCompile Include="System_Loop.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Comp_Position2D.h" />
-    <ClCompile Include="Move_To.h" />
+    <ClCompile Include="Graphics_Transformations_MoveTo.h" />
     <ClCompile Include="Scale_To.h" />
     <ClCompile Include="Settings.cpp" />
     <ClCompile Include="System_Sound.cpp" />

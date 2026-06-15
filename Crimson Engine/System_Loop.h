@@ -2,7 +2,7 @@
 #include "System_Base.h"
 #include <vector>
 
-class Loop : public System_Base
+class System_Loop : public System_Base
 {
 	public:
 		void Start(bool* State);

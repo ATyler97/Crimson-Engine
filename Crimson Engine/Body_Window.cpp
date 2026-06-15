@@ -17,6 +17,7 @@ void Body_Window::InstanceWindow()
 {
 	std::vector<GUI_Body> Window;
 
+
 	GUI_Body Body = GUI_Body();
 	GUI_Body TopBar = GUI_Body();
 	GUI_Body Exit = GUI_Body();
@@ -35,6 +36,7 @@ void Body_Window::InstanceWindow()
 	TopBar.Size = GUI_Element_Size(620, 20);
 	TopBar.Shape = GUI_Element_Shape(GUI_Element_Shape::Shape_Type::Rectangle_Filled);
 	TopBar.Visibility = GUI_Element_Visibility(255);
+	TopBar.EventArea = GUI_Element_EventArea(TopBar.Size->Height, TopBar.Size->Width, TopBar.Location->X, TopBar.Location->Y);
 	Window.push_back(TopBar);
 
 	Exit.Color = GUI_Element_Color(179, 57, 81, 0);
@@ -42,6 +44,7 @@ void Body_Window::InstanceWindow()
 	Exit.Size = GUI_Element_Size(20, 20);
 	Exit.Shape = GUI_Element_Shape(GUI_Element_Shape::Shape_Type::Rectangle_Filled);
 	Exit.Visibility = GUI_Element_Visibility(255);
+	Exit.EventArea = GUI_Element_EventArea(Exit.Size->Height, Exit.Size->Width, Exit.Location->X, Exit.Location->Y);
 	Window.push_back(Exit);
 
 	SliderBar.Color = GUI_Element_Color(56, 56, 56, 0);
@@ -56,7 +59,9 @@ void Body_Window::InstanceWindow()
 	Slider.Size = GUI_Element_Size(13, 60);
 	Slider.Shape = GUI_Element_Shape(GUI_Element_Shape::Shape_Type::Rectangle_Filled);
 	Slider.Visibility = GUI_Element_Visibility(255);
+	Slider.EventArea = GUI_Element_EventArea(Slider.Size->Height, Slider.Size->Width, Slider.Location->X, Slider.Location->Y);
 	Window.push_back(Slider);
 
 	window = Window;
 }
+

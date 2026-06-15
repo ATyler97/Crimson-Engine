@@ -7,7 +7,6 @@
 
 bool Running;
 bool* RunningPtr = &Running;
-Loop EngineLoop;
 SystemManager SManager;
 Settings GameSettings;
 Settings* GameSettingsPtr = &GameSettings;
@@ -22,8 +21,10 @@ void Application::Start()
 	SManager.InitializeSystems(GameSettingsPtr,RunningPtr);
 
 	std::cout << std::endl << "Application | Start() | 'Beginning Systems Insertion into Loop' " << std::endl;
-	EngineLoop.InsertSystemsIntoLoop(SManager.ReturnSystems());	
+	SManager.ReturnLoop()->InsertSystemsIntoLoop(SManager.ReturnSystems());
 
 	std::cout << std::endl << "Application | Start() | 'Starting Engine Loop' " << std::endl;
-	EngineLoop.Start(RunningPtr);
+	
+	
+	SManager.ReturnLoop()->Start(RunningPtr);
 }

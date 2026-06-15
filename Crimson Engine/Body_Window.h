@@ -8,5 +8,5 @@ struct Body_Window
 	std::vector<GUI_Body> GetVectorWindow();
 
 	static void InstanceWindow();
-
+	void Move();
 };

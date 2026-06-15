@@ -1,6 +1,7 @@
 #include <SDL2/SDL.h>
 #include "GUI_Graphics_Renderer.h"
 #include "Body_Window.h"
+#include "Graphics_Transformations_MoveTo.h"
 #include <iostream>
 
 GUI_Scene ActiveScene = GUI_Scene();

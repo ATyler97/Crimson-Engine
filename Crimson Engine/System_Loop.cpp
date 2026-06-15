@@ -5,30 +5,26 @@
 #include <SDL2/SDL.h>
 using namespace std;
 
-
 vector<System_Base*> systems;
-int64_t CurrentTime;
-int64_t DeltaTime;
-int64_t PreviousTime;
 
-void Loop::Start(bool* state) {
+void System_Loop::Start(bool* state) {
 	std::cout <<"\tLoop | Start() | 'Starting Engine Loop' " << std::endl;
-	
+
 	while (state) {
-		CurrentTime = SDL_GetTicks64();
-		DeltaTime = CurrentTime - PreviousTime;
-		PreviousTime = CurrentTime;
+		State->TimeSt8.CurrentTime = SDL_GetTicks64();
+		State->TimeSt8.DeltaTime = State->TimeSt8.CurrentTime - State->TimeSt8.PreviousTime;
+		State->TimeSt8.PreviousTime = State->TimeSt8.CurrentTime;
 
 		for (int i = 0; i < systems.size(); i++) 
 		{
 			systems[i]->Update();
 		}
-		std::cout << "\tLoop | Start() | 'Current Time: " << CurrentTime << "' " << std::endl;
-		std::cout << "\tLoop | Start() | 'Delta Time: " << DeltaTime << "' " << std::endl;
-		std::cout << "\tLoop | Start() | 'Previous Time: " << PreviousTime << "' " << std::endl;
+		std::cout << "\tLoop | Start() | 'Current Time: " << State->TimeSt8.CurrentTime << "' " << std::endl;
+		std::cout << "\tLoop | Start() | 'Delta Time: " << State->TimeSt8.DeltaTime << "' " << std::endl;
+		std::cout << "\tLoop | Start() | 'Previous Time: " << State->TimeSt8.PreviousTime << "' " << std::endl;
 	}
 }
-void Loop::InsertSystemsIntoLoop(std::vector<System_Base*> systemsVector) {
+void System_Loop::InsertSystemsIntoLoop(std::vector<System_Base*> systemsVector) {
 	std::cout << "\tLoop | InsertSystemsIntoLoop() | 'Inserting systems into loop' " << std::endl;
 	systems = systemsVector;
 }

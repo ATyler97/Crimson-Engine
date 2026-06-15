@@ -17,27 +17,19 @@ GUI_Graphics_Renderer GUIRendptr = GUI_Graphics_Renderer();
 void System_Graphics::Initialize(Settings* gameSettings)
 {
 	std::cout << "\t\tGraphics System | Initialize() | 'Initializing Graphics system' " << std::endl;
-	Title = gameSettings->WindowTitle;
-	WindowWidth = gameSettings->WindowWidth;
-	WindowHeight = gameSettings->WindowHeight;
 	DrawWindow();
 	InitializeRenderer();
-}
-void System_Graphics::UpdateGraphicsSettings(Settings* gameSettings)
-{
-	std::cout << "\t\tGraphics System | Initialize() | 'Initializing Graphics system' " << std::endl;
-	// Initialize the graphics system
 }
 void System_Graphics::Update()
 {
 	std::cout << "\t\tGraphics System | Update() | 'Updating Graphics system' " << std::endl;
+	
 	DrawFrame();
-	// Update the graphics system
 }
 void System_Graphics::DrawWindow() {
 	std::cout << "\t\tGraphics System | DrawWindow() | 'Drawing Window' " << std::endl;
 
-	window = SDL_CreateWindow(Title , 800, 600, WindowWidth, WindowHeight, SDL_WINDOW_SHOWN);
+	window = SDL_CreateWindow("Game", 800, 600, 1920, 1080, SDL_WINDOW_SHOWN);
 	if (window == NULL) {
 		// Handle error
 	}
@@ -45,16 +37,13 @@ void System_Graphics::DrawWindow() {
 void System_Graphics::DrawFrame() {
 	std::cout << "\t\tGraphics System | DrawFrame() | 'Drawing Frame' " << std::endl;	
 	// this methood will have alot of shit to do when it comes to what to draw. 
-	ProcessLayers();
-	
+	ProcessLayers();	
 }
 void System_Graphics::ProcessLayers() 
 {
 	SDL_RenderClear(GUIRendererPtr);
-	//Hey bart do the thing
 
 	GUIRendptr.RenderObjectsToGUI(GUIRendererPtr);
-	
 
 	SDL_RenderPresent(GUIRendererPtr);
 	//SDL_Delay(10000);
@@ -66,8 +55,4 @@ void System_Graphics::InitializeRenderer()
 	GUIRendererPtr = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 	SDL_SetRenderDrawColor(GUIRendererPtr, 0, 0, 0, 256);
 	SDL_RenderClear(GUIRendererPtr);
-}
-void System_Graphics::PassWindowAndRenderPointerToSettings() 
-{
-	
 }
