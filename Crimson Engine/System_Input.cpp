@@ -2,6 +2,7 @@
 #include <iostream>
 #include <SDL2/SDL.h>
 #include "vector"
+#include "ObjectProcessor.h"
 
 void System_Input::Initialize()
 {
@@ -21,6 +22,8 @@ void System_Input::KeyReleased(SDL_Keysym Key)
 }
 void System_Input::MouseMoved(SDL_MouseMotionEvent Mouse)
 {
+	State->InputSt8.MouseXOld = State->InputSt8.MouseXpos;
+	State->InputSt8.MouseYOld = State->InputSt8.MouseYpos;
 	State->InputSt8.MouseXpos = Mouse.x;
 	State->InputSt8.MouseYpos = Mouse.y;
 }

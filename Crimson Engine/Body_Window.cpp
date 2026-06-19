@@ -1,13 +1,19 @@
 #include "Body_Window.h"
+#include "Object.h"
 
-std::vector<GUI_Body> window = std::vector<GUI_Body>();
+Objects window = Objects();
+//std::vector<GUI_Body> window = std::vector<GUI_Body>();
 
 Body_Window::Body_Window()
 {
 	InstanceWindow();
 }
 
-std::vector<GUI_Body> Body_Window::GetVectorWindow()
+//std::vector<GUI_Body> Body_Window::GetVectorWindow()
+//{
+//	return window;
+//}
+Objects Body_Window::GetVectorWindow()
 {
 	return window;
 }
@@ -15,7 +21,7 @@ std::vector<GUI_Body> Body_Window::GetVectorWindow()
 
 void Body_Window::InstanceWindow()
 {
-	std::vector<GUI_Body> Window;
+	//std::vector<GUI_Body> Window;
 
 
 	GUI_Body Body = GUI_Body();
@@ -29,7 +35,8 @@ void Body_Window::InstanceWindow()
 	Body.Size = GUI_Element_Size(640, 480);
 	Body.Shape = GUI_Element_Shape(GUI_Element_Shape::Shape_Type::Rectangle_Filled);
 	Body.Visibility = GUI_Element_Visibility(255);
-	Window.push_back(Body);
+	Body.Clickable = GUI_Element_Clickable(false);
+	window.Object.push_back(Body);
 
 	TopBar.Color = GUI_Element_Color(221, 96, 49, 0);
 	TopBar.Location = GUI_Element_Location(0, 0);
@@ -37,7 +44,8 @@ void Body_Window::InstanceWindow()
 	TopBar.Shape = GUI_Element_Shape(GUI_Element_Shape::Shape_Type::Rectangle_Filled);
 	TopBar.Visibility = GUI_Element_Visibility(255);
 	TopBar.EventArea = GUI_Element_EventArea(TopBar.Size->Height, TopBar.Size->Width, TopBar.Location->X, TopBar.Location->Y);
-	Window.push_back(TopBar);
+	TopBar.Clickable = GUI_Element_Clickable(true);
+	window.Object.push_back(TopBar);
 
 	Exit.Color = GUI_Element_Color(179, 57, 81, 0);
 	Exit.Location = GUI_Element_Location(620, 0);
@@ -45,14 +53,16 @@ void Body_Window::InstanceWindow()
 	Exit.Shape = GUI_Element_Shape(GUI_Element_Shape::Shape_Type::Rectangle_Filled);
 	Exit.Visibility = GUI_Element_Visibility(255);
 	Exit.EventArea = GUI_Element_EventArea(Exit.Size->Height, Exit.Size->Width, Exit.Location->X, Exit.Location->Y);
-	Window.push_back(Exit);
+	Exit.Clickable = GUI_Element_Clickable(false);
+	window.Object.push_back(Exit);
 
 	SliderBar.Color = GUI_Element_Color(56, 56, 56, 0);
 	SliderBar.Location = GUI_Element_Location(620, 20);
 	SliderBar.Size = GUI_Element_Size(20, 460);
 	SliderBar.Shape = GUI_Element_Shape(GUI_Element_Shape::Shape_Type::Rectangle_Filled);
 	SliderBar.Visibility = GUI_Element_Visibility(255);
-	Window.push_back(SliderBar);
+	SliderBar.Clickable = GUI_Element_Clickable(false);
+	window.Object.push_back(SliderBar);
 
 	Slider.Color = GUI_Element_Color(80, 80, 80, 0);
 	Slider.Location = GUI_Element_Location(623, 23);
@@ -60,8 +70,9 @@ void Body_Window::InstanceWindow()
 	Slider.Shape = GUI_Element_Shape(GUI_Element_Shape::Shape_Type::Rectangle_Filled);
 	Slider.Visibility = GUI_Element_Visibility(255);
 	Slider.EventArea = GUI_Element_EventArea(Slider.Size->Height, Slider.Size->Width, Slider.Location->X, Slider.Location->Y);
-	Window.push_back(Slider);
+	Slider.Clickable = GUI_Element_Clickable(false);
+	window.Object.push_back(Slider);
 
-	window = Window;
+	//window = Window;
 }
 

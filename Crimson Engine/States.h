@@ -10,7 +10,9 @@ struct InputState
 	bool RightMouseButton;
 	bool MiddleMouseButton = false;
 	int32_t MouseXpos;
+	int32_t MouseXOld;
 	int32_t MouseYpos;
+	int32_t MouseYOld;
 	int32_t ScrollPosition;
 };
 struct MainLoop{

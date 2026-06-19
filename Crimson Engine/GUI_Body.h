@@ -8,6 +8,7 @@
 #include "GUI_Element_Shape.h"
 #include "GUI_Element_Visibility.h"
 #include "GUI_Element_EventArea.h"
+#include "GUI_Element_Clickable.h"
 
 
 struct GUI_Body
@@ -19,5 +20,6 @@ struct GUI_Body
 	std::optional<GUI_Element_Shape> Shape;
 	std::optional<GUI_Element_Visibility> Visibility;
 	std::optional<GUI_Element_EventArea> EventArea;
+	std::optional<GUI_Element_Clickable> Clickable;
 
 };

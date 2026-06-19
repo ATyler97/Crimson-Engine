@@ -6,15 +6,19 @@
 #include <vector>
 #include <string>
 #include <SDL2/SDL.h>
-
+#include "States.h"
 class GUI_Graphics_Renderer
 {
 	public:
-		GUI_Graphics_Renderer();
+		GUI_Graphics_Renderer(States* state);
 		void AddBodyToScene(GUI_Body BodyToAdd);
 		void AddBodiesToScene(std::vector<GUI_Body> BodyVectorToAdd);
 		void RenderObjectsToGUI(SDL_Renderer* rend);
-		void DetermineShapeAndRender(SDL_Renderer* rend, GUI_Body BodyToAdd);
-		void PopulateBody(GUI_Body Body);
+		void DragWindow(std::vector<GUI_Body> Window, int i);
+		void DragWindow(std::vector<GUI_Body> Window);
+		void DetermineKeyResult();
+		void DetermineShape(SDL_Renderer* rend, GUI_Body BodyToAdd);
+		void PopulateBody();
+		void Render();
 };
 

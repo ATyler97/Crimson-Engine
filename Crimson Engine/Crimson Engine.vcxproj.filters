@@ -4,24 +4,6 @@
     <Filter Include="Engine">
       <UniqueIdentifier>{d4296213-f762-4cfb-915c-ce284907bcb1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Components">
-      <UniqueIdentifier>{b5d33348-9964-44a9-b85b-038443d2a1a0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Components\Physical Attribute Components">
-      <UniqueIdentifier>{142b03af-747a-45d3-b96f-14e7c921c8e6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Components\Physical Attribute Components\Force Components">
-      <UniqueIdentifier>{11225eee-ad49-40cf-8d44-3a9c123b0924}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Components\Physical Attribute Components\Object Component">
-      <UniqueIdentifier>{b4dc6d4d-55d0-4df1-8709-26b806af286d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Components\Physical Attribute Components\Global Positional Components">
-      <UniqueIdentifier>{db04dda1-9d2f-4aeb-a5cd-b2398ddfa931}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Components\Physical Attribute Components\Physics Transformations">
-      <UniqueIdentifier>{ab80d675-4add-4889-8ea8-6f6f64dd6192}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine\Engine Foundation">
       <UniqueIdentifier>{66ab5054-5c5a-4c58-a433-19f94aa9b665}</UniqueIdentifier>
     </Filter>
@@ -42,9 +24,6 @@
     </Filter>
     <Filter Include="Engine\Graphics">
       <UniqueIdentifier>{b3e10549-67d0-41aa-8cb9-af469b7c2300}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Graphics\Graphics Transformations">
-      <UniqueIdentifier>{182f7b99-2969-4ce5-b7b4-db344ac1de5d}</UniqueIdentifier>
     </Filter>
     <Filter Include="Engine\Graphics\GUI Graphics">
       <UniqueIdentifier>{a42bdb39-d04a-45a0-a768-b781d76c05ec}</UniqueIdentifier>
@@ -67,6 +46,33 @@
     <Filter Include="Engine\States">
       <UniqueIdentifier>{0941fb34-a578-4732-97a2-9a1a2e2ec879}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Graphics\GUI Graphics\GUI_Transformations">
+      <UniqueIdentifier>{cae488ea-18c2-412f-95b6-3e0d2d2af252}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Later items">
+      <UniqueIdentifier>{5e9fecef-bf3f-4040-9e0d-68f4fae97e53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Later items\Components">
+      <UniqueIdentifier>{b5d33348-9964-44a9-b85b-038443d2a1a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Later items\Components\Physical Attribute Components">
+      <UniqueIdentifier>{142b03af-747a-45d3-b96f-14e7c921c8e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Later items\Components\Physical Attribute Components\Force Components">
+      <UniqueIdentifier>{11225eee-ad49-40cf-8d44-3a9c123b0924}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Later items\Components\Physical Attribute Components\Object Component">
+      <UniqueIdentifier>{b4dc6d4d-55d0-4df1-8709-26b806af286d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Later items\Components\Physical Attribute Components\Global Positional Components">
+      <UniqueIdentifier>{db04dda1-9d2f-4aeb-a5cd-b2398ddfa931}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Later items\Components\Physical Attribute Components\Physics Transformations">
+      <UniqueIdentifier>{ab80d675-4add-4889-8ea8-6f6f64dd6192}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Practice grounds">
+      <UniqueIdentifier>{c332fb1c-40d4-4206-ae24-5dd485345ca4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Settings.h">
@@ -76,25 +82,22 @@
       <Filter>Engine\Engine Foundation\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Comp_Gravity.h">
-      <Filter>Engine\Components\Physical Attribute Components\Force Components</Filter>
+      <Filter>Later items\Components\Physical Attribute Components\Force Components</Filter>
     </ClInclude>
     <ClInclude Include="Comp_Weight.h">
-      <Filter>Engine\Components\Physical Attribute Components\Force Components</Filter>
+      <Filter>Later items\Components\Physical Attribute Components\Force Components</Filter>
     </ClInclude>
     <ClInclude Include="Comp_ZVelocity.h">
-      <Filter>Engine\Components\Physical Attribute Components\Force Components</Filter>
+      <Filter>Later items\Components\Physical Attribute Components\Force Components</Filter>
     </ClInclude>
     <ClInclude Include="Comp_Position3D.h">
-      <Filter>Engine\Components\Physical Attribute Components\Global Positional Components</Filter>
+      <Filter>Later items\Components\Physical Attribute Components\Global Positional Components</Filter>
     </ClInclude>
     <ClInclude Include="Comp_LocalVertices3D.h">
-      <Filter>Engine\Components\Physical Attribute Components\Object Component</Filter>
+      <Filter>Later items\Components\Physical Attribute Components\Object Component</Filter>
     </ClInclude>
     <ClInclude Include="Comp_Primitive.h">
-      <Filter>Engine\Components\Physical Attribute Components\Object Component</Filter>
-    </ClInclude>
-    <ClInclude Include="Reflect_OverX.h">
-      <Filter>Engine\Graphics\Graphics Transformations</Filter>
+      <Filter>Later items\Components\Physical Attribute Components\Object Component</Filter>
     </ClInclude>
     <ClInclude Include="System_EventManager.h">
       <Filter>Engine\Systems</Filter>
@@ -127,7 +130,7 @@
       <Filter>Engine\Systems</Filter>
     </ClInclude>
     <ClInclude Include="Component.h">
-      <Filter>Engine\Components</Filter>
+      <Filter>Later items\Components</Filter>
     </ClInclude>
     <ClInclude Include="GUI_Body.h">
       <Filter>Engine\Graphics\GUI Graphics\GUI_Body</Filter>
@@ -165,28 +168,46 @@
     <ClInclude Include="States.h">
       <Filter>Engine\States</Filter>
     </ClInclude>
+    <ClInclude Include="GUI_Transformations.h">
+      <Filter>Engine\Graphics\GUI Graphics\GUI_Transformations</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseMath.h">
+      <Filter>Engine\Graphics\GUI Graphics\GUI_Transformations</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Practice grounds</Filter>
+    </ClInclude>
+    <ClInclude Include="Layer.h">
+      <Filter>Practice grounds</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Practice grounds</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI_Graphics_Main.h">
+      <Filter>Practice grounds</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI_Graphics_RenderTools.h">
+      <Filter>Practice grounds</Filter>
+    </ClInclude>
+    <ClInclude Include="System_ObjectProcessor.h">
+      <Filter>Practice grounds</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Comp_NormalForce.h">
-      <Filter>Engine\Components\Physical Attribute Components\Force Components</Filter>
+      <Filter>Later items\Components\Physical Attribute Components\Force Components</Filter>
     </ClCompile>
     <ClCompile Include="Comp_XVelocity.h">
-      <Filter>Engine\Components\Physical Attribute Components\Force Components</Filter>
+      <Filter>Later items\Components\Physical Attribute Components\Force Components</Filter>
     </ClCompile>
     <ClCompile Include="Comp_YVelocity.h">
-      <Filter>Engine\Components\Physical Attribute Components\Force Components</Filter>
+      <Filter>Later items\Components\Physical Attribute Components\Force Components</Filter>
     </ClCompile>
     <ClCompile Include="Comp_Position2D.h">
-      <Filter>Engine\Components\Physical Attribute Components\Global Positional Components</Filter>
+      <Filter>Later items\Components\Physical Attribute Components\Global Positional Components</Filter>
     </ClCompile>
     <ClCompile Include="Comp_LocalVertices2D.h">
-      <Filter>Engine\Components\Physical Attribute Components\Object Component</Filter>
-    </ClCompile>
-    <ClCompile Include="Graphics_Transformations_MoveTo.h">
-      <Filter>Engine\Graphics\Graphics Transformations</Filter>
-    </ClCompile>
-    <ClCompile Include="Scale_To.h">
-      <Filter>Engine\Graphics\Graphics Transformations</Filter>
+      <Filter>Later items\Components\Physical Attribute Components\Object Component</Filter>
     </ClCompile>
     <ClCompile Include="System_EventManager.cpp">
       <Filter>Engine\Systems</Filter>
@@ -229,6 +250,24 @@
     </ClCompile>
     <ClCompile Include="States.cpp">
       <Filter>Engine\States</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI_Element_Clickable.h">
+      <Filter>Engine\Graphics\GUI Graphics\GUI_Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI_Transformations.cpp">
+      <Filter>Engine\Graphics\GUI Graphics\GUI_Transformations</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseMath.cpp">
+      <Filter>Engine\Graphics\GUI Graphics\GUI_Transformations</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI_Graphics_Main.cpp">
+      <Filter>Practice grounds</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI_Graphics_RenderTools.cpp">
+      <Filter>Practice grounds</Filter>
+    </ClCompile>
+    <ClCompile Include="System_ObjectProcessor.cpp">
+      <Filter>Practice grounds</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

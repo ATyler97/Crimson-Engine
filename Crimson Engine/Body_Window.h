@@ -1,11 +1,12 @@
 #pragma once
 #include "GUI_Body.h"
 #include <optional>
+#include "Object.h"
 
 struct Body_Window 
 {
 	Body_Window();
-	std::vector<GUI_Body> GetVectorWindow();
+	Objects GetVectorWindow();
 
 	static void InstanceWindow();
 	void Move();

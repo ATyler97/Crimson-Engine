@@ -7,12 +7,11 @@ class System_Graphics : public System_Base
 	public:
 		void Update() override;
 		void Initialize(Settings* gameSettings);
-		void UpdateGraphicsSettings(Settings* gameSettings);
 	private:
 		void DrawWindow();
 		void DrawFrame();
+		void ProcessLayersExp();
 		void InitializeRenderer();
-		void PassWindowAndRenderPointerToSettings();
 		void ProcessLayers();
 		
 		

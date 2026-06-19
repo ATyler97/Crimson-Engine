@@ -13,6 +13,7 @@ public:
 		Size,
 		Visibility,
 		EventArea,
+		Clickable,
 	};
 	ElementType TypeOfElement;
 	virtual ~GUI_Element() {};

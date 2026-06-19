@@ -5,6 +5,7 @@
 #include "System_Sound.h"
 #include "System_EventManager.h"
 #include "System_Loop.h"
+#include "System_ObjectProcessor.h"
 #include <SDL2/SDL.h>
 #include <vector>
 #include <iostream>
@@ -19,6 +20,7 @@ System_EventManager Events = System_EventManager();
 System_Graphics Graphics = System_Graphics();
 System_Logic Logic = System_Logic();
 System_Sound Sound = System_Sound();
+System_ObjectProcessor Processor = System_ObjectProcessor();
 
 States* StatePtr = &State;
 
@@ -28,6 +30,7 @@ System_EventManager* EventsPtr = &Events;
 System_Logic* LogicPtr = &Logic;
 System_Sound* SoundPtr = &Sound;
 System_Graphics* GraphicsPtr = &Graphics;
+System_ObjectProcessor* ProcessorPtr = &Processor;
 std::vector <System_Base*> Systems;
 
 void SystemManager::InitializeSystems(Settings* gameSettings ,bool* LoopStateptr)
@@ -35,6 +38,7 @@ void SystemManager::InitializeSystems(Settings* gameSettings ,bool* LoopStateptr
 	std::cout << "\tSystemManager | InitializingSystems() | 'Initializing all systems' " << std::endl;
 	Events.Initialize(LoopStateptr, InputPtr);
 	Input.Initialize();
+	Processor.Initialize();
 	Logic.Initialize();
 	Graphics.Initialize(gameSettings);
 	Sound.Initialize();
@@ -45,7 +49,8 @@ void SystemManager::InitializeSystems(Settings* gameSettings ,bool* LoopStateptr
 	Logic.State = &State;
 	Graphics.State = &State;
 	Sound.State = &State;
-	Systems = { EventsPtr,InputPtr, LogicPtr, GraphicsPtr, SoundPtr };
+	Processor.State = &State;
+	Systems = { EventsPtr,InputPtr, LogicPtr,ProcessorPtr, GraphicsPtr, SoundPtr,ProcessorPtr };
 }
 System_Loop* SystemManager::ReturnLoop() {
 	return LoopPtr;
