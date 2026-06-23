@@ -140,28 +140,24 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
-    <ClInclude Include="Body_Window.h" />
+    <ClInclude Include="Graphics_Task.h" />
+    <ClInclude Include="Assembly.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="Comp_Gravity.h" />
     <ClInclude Include="Comp_LocalVertices3D.h" />
     <ClInclude Include="Comp_Weight.h" />
     <ClInclude Include="Comp_ZVelocity.h" />
-    <ClInclude Include="GUI_Body.h" />
+    <ClInclude Include="GUI_Object.h" />
     <ClInclude Include="GUI_Element.h" />
     <ClInclude Include="GUI_Element_Color.h" />
     <ClInclude Include="GUI_Element_Location.h" />
     <ClInclude Include="GUI_Element_EventArea.h" />
     <ClInclude Include="GUI_Element_Shape.h" />
     <ClInclude Include="GUI_Element_Size.h" />
-    <ClInclude Include="GUI_Graphics_Main.h" />
     <ClInclude Include="GUI_Graphics_Renderer.h" />
-    <ClInclude Include="GUI_Graphics_RenderTools.h" />
     <ClInclude Include="GUI_Scene.h" />
     <ClInclude Include="GUI_Transformations.h" />
-    <ClInclude Include="Layer.h" />
     <ClInclude Include="MouseMath.h" />
-    <ClInclude Include="Object.h" />
-    <ClInclude Include="Scene.h" />
     <ClInclude Include="States.h" />
     <ClInclude Include="System_EventManager.h" />
     <ClInclude Include="System_Graphics.h" />
@@ -173,26 +169,25 @@
     <ClInclude Include="Comp_Primitive.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Settings.h" />
-    <ClInclude Include="System_ObjectProcessor.h" />
     <ClInclude Include="System_Sound.h" />
     <ClInclude Include="System_Base.h" />
     <ClInclude Include="System_Manager.h" />
     <ClInclude Include="GUI_Element_Visibility.h" />
+    <ClInclude Include="Application_Task.h" />
+    <ClInclude Include="System_Task.h" />
+    <ClInclude Include="Task.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
-    <ClCompile Include="Body_Window.cpp" />
+    <ClCompile Include="Assembly.cpp" />
     <ClCompile Include="Comp_LocalVertices2D.h" />
     <ClCompile Include="Comp_NormalForce.h" />
     <ClCompile Include="Comp_XVelocity.h" />
     <ClCompile Include="Comp_YVelocity.h" />
     <ClCompile Include="GUI_Element_Clickable.h" />
-    <ClCompile Include="GUI_Graphics_Main.cpp" />
     <ClCompile Include="GUI_Graphics_Renderer.cpp" />
-    <ClCompile Include="GUI_Graphics_RenderTools.cpp" />
     <ClCompile Include="GUI_Transformations.cpp" />
     <ClCompile Include="MouseMath.cpp" />
-    <ClCompile Include="System_ObjectProcessor.cpp" />
     <ClCompile Include="States.cpp" />
     <ClCompile Include="System_EventManager.cpp" />
     <ClCompile Include="System_Graphics.cpp" />
@@ -205,6 +200,8 @@
     <ClCompile Include="System_Sound.cpp" />
     <ClCompile Include="System_Base.cpp" />
     <ClCompile Include="System_Manager.cpp" />
+    <ClCompile Include="System_Task.cpp" />
+    <ClCompile Include="Task.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Crimson Engine.rc" />

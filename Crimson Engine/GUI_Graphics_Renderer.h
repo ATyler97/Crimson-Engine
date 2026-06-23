@@ -1,8 +1,8 @@
 #pragma once
 #include "GUI_Scene.h"
 #include "GUI_Layer.h"
-#include "GUI_Body.h"
-#include "Body_Window.h"
+#include "GUI_Object.h"
+#include "Assembly.h"
 #include <vector>
 #include <string>
 #include <SDL2/SDL.h>
@@ -10,14 +10,14 @@
 class GUI_Graphics_Renderer
 {
 	public:
-		GUI_Graphics_Renderer(States* state);
-		void AddBodyToScene(GUI_Body BodyToAdd);
-		void AddBodiesToScene(std::vector<GUI_Body> BodyVectorToAdd);
+		GUI_Graphics_Renderer();
+		void AddBodyToScene(GUI_Object BodyToAdd);
+		void SetState(States* state);
+		void AddBodiesToScene(std::vector<GUI_Object> BodyVectorToAdd);
 		void RenderObjectsToGUI(SDL_Renderer* rend);
-		void DragWindow(std::vector<GUI_Body> Window, int i);
-		void DragWindow(std::vector<GUI_Body> Window);
+		void DragWindow(GUI_Object* Window);
 		void DetermineKeyResult();
-		void DetermineShape(SDL_Renderer* rend, GUI_Body BodyToAdd);
+		void DetermineShape(SDL_Renderer* rend, GUI_Object BodyToAdd);
 		void PopulateBody();
 		void Render();
 };

@@ -11,10 +11,11 @@ void System_Input::Initialize()
 void System_Input::Update()
 {
 	std::cout << "\n\t\tInput System | Update() | 'Updating Input system' " << std::endl;
+	ProcessInput();
 }
 void System_Input::ProcessInput() 
 {
-	
+
 }
 void System_Input::KeyReleased(SDL_Keysym Key)
 {

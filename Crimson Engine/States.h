@@ -6,8 +6,8 @@ struct InputState
 {
 	bool KEYS[322];
 	bool* KEYSPtr = KEYS;
-	bool LeftMouseButton;
-	bool RightMouseButton;
+	bool LeftMouseButton = false;
+	bool RightMouseButton = false;
 	bool MiddleMouseButton = false;
 	int32_t MouseXpos;
 	int32_t MouseXOld;

@@ -1,14 +1,22 @@
 #pragma once
 #include "GUI_Transformations.h"
-#include "Body_Window.h"
+#include "Assembly.h"
 #include <vector>
 class GUI_Transformations
 {
 	public:
-		static void Scale_To();
-		static void Move_To(GUI_Body Body, int32_t OldMouseXPos, int32_t OldMouseYPos, int32_t NewXLoc, int32_t NewYLoc);
-		static void Move_To(std::vector<GUI_Body> Body, int32_t OldMouseXPos, int32_t OldMouseYPos, int32_t NewMouseXLoc, int32_t NewMouseYLoc);
 
+		void MoveObject(GUI_Object* obj,char TypeOfAxis, int NewLocation);
+
+		void ScaleObject(GUI_Object* obj, float scaleFactor);
+
+		void ScaleObjectAxis(GUI_Object* obj, float scaleFactor,char TypeOfAxis);
+
+		void MoveObject(std::vector<GUI_Object*> obj,char TypeOfAxis, int NewLocation);
+
+		void ScaleObject(std::vector<GUI_Object*> obj, float scaleFactor);
+
+		void ScaleObjectAxis(std::vector<GUI_Object*> obj, float scaleFactor,char TypeOfAxis);
 
 };
 

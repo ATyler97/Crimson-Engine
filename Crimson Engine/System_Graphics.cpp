@@ -5,7 +5,6 @@
 #include "Settings.h"
 #include <iostream>
 #include "GUI_Graphics_Renderer.h"
-#include "GUI_Graphics_Main.h"
 
 int WindowWidth = 1920;
 int WindowHeight = 1200;
@@ -13,14 +12,16 @@ const char* Title = "Default Title";
 SDL_Window* window;
 SDL_Renderer* GUIRendererPtr;
 Settings* gameSettings;
-GUI_Graphics_Renderer GUIGraphicsRender = GUI_Graphics_Renderer(System_Graphics().State);
-GUI_Graphics_Main GUIEXP = GUI_Graphics_Main(GUIRendererPtr,System_Graphics().State);
+GUI_Graphics_Renderer GUIGraphicsRender = GUI_Graphics_Renderer();
 
 void System_Graphics::Initialize(Settings* gameSettings)
 {
 	std::cout << "\t\tGraphics System | Initialize() | 'Initializing Graphics system' " << std::endl;
+
 	DrawWindow();
 	InitializeRenderer();
+	GUIGraphicsRender.SetState(System_Graphics::State);
+		
 }
 void System_Graphics::Update()
 {
@@ -39,8 +40,8 @@ void System_Graphics::DrawWindow() {
 void System_Graphics::DrawFrame() {
 	std::cout << "\t\tGraphics System | DrawFrame() | 'Drawing Frame' " << std::endl;	
 	// this methood will have alot of shit to do when it comes to what to draw. 
-	//ProcessLayers();
-	ProcessLayersExp();
+	ProcessLayers();
+	//ProcessLayersExp();
 }
 
 // old method.
@@ -53,15 +54,6 @@ void System_Graphics::ProcessLayers()
 	SDL_RenderPresent(GUIRendererPtr);
 	//SDL_Delay(10000);
 }
-
-//experimental
-void System_Graphics::ProcessLayersExp() 
-{
-	SDL_RenderClear(GUIRendererPtr);
-	GUIEXP.Render();
-	SDL_RenderClear(GUIRendererPtr);
-}
-
 void System_Graphics::InitializeRenderer()
 {
 	std::cout << "\t\tGraphics System | InitializeRenderer() | 'Initializing Renderer' " << std::endl;

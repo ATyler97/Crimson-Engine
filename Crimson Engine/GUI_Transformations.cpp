@@ -1,21 +1,57 @@
 #include "GUI_Transformations.h"
 #include "MouseMath.h"
 
-void GUI_Transformations::Scale_To()
+void GUI_Transformations::MoveObject(GUI_Object* obj,char TypeOfAxis, int NewLocation)
 {
-
-}
-
-void GUI_Transformations::Move_To(GUI_Body Body, int32_t OldMouseXPos, int32_t OldMouseYPos, int32_t NewMouseXLoc, int32_t NewMouseYLoc)
-{
-	Body.Location->X = Mouse_Math::OriginMouseOffset(OldMouseXPos, NewMouseXLoc, Body.Location->X);
-	Body.Location->Y = Mouse_Math::OriginMouseOffset(OldMouseYPos, NewMouseYLoc, Body.Location->Y);
-}
-void GUI_Transformations::Move_To(std::vector<GUI_Body> Body, int32_t OldMouseXPos, int32_t OldMouseYPos, int32_t NewMouseXLoc, int32_t NewMouseYLoc)
-{
-	for (int i = 0; i < Body.size(); i++)
-	{
-		Body[i].Location->X = Mouse_Math::OriginMouseOffset(OldMouseXPos, NewMouseXLoc, Body[i].Location->X);
-		Body[i].Location->Y = Mouse_Math::OriginMouseOffset(OldMouseYPos, NewMouseYLoc, Body[i].Location->Y);
+	if (TypeOfAxis == 'X') {
+		obj->Location->X = NewLocation;
 	}
+	if (TypeOfAxis == 'Y') {
+		obj->Location->Y = NewLocation;
+	}
+	if (TypeOfAxis == 'Z') {
+		//obj->Location->Z = NewLocation;
+	}
+	else {
+		
+	}
+}
+
+void GUI_Transformations::ScaleObject(GUI_Object* obj, float scaleFactor)
+{
+
+}
+
+void GUI_Transformations::ScaleObjectAxis(GUI_Object* obj, float scaleFactor,char TypeOfAxis)
+{
+
+}
+
+void GUI_Transformations::MoveObject(std::vector<GUI_Object*> obj,const char TypeOfAxis, int NewLocation)
+{
+	for (int i = 0; i < obj.size(); i++) 
+	{
+		if (TypeOfAxis == 'X') {
+			obj[i]->Location->X = NewLocation;
+		}
+		if (TypeOfAxis == 'Y') {
+			obj[i]->Location->Y = NewLocation;
+		}
+		if (TypeOfAxis == 'Z') {
+			//obj->Location->Z = NewLocation;
+		}
+		else {
+
+		}
+	}
+}
+
+void GUI_Transformations::ScaleObject(std::vector<GUI_Object*> obj, float scaleFactor)
+{
+
+}
+
+void GUI_Transformations::ScaleObjectAxis(std::vector<GUI_Object*> obj,float scaleFactor,char TypeOfAxis)
+{
+
 }

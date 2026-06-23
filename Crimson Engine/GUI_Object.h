@@ -11,9 +11,9 @@
 #include "GUI_Element_Clickable.h"
 
 
-struct GUI_Body
+struct GUI_Object
 {
-	GUI_Body() = default;
+	GUI_Object() = default;
 	std::optional<GUI_Element_Color> Color;
 	std::optional<GUI_Element_Size> Size;
 	std::optional<GUI_Element_Location> Location;

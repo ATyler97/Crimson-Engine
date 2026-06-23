@@ -38,7 +38,7 @@ void GUI_Graphics_Main::Initalize()
 {
 	ActiveScene = Scenes();
 	ActiveScene.Scene.push_back(TestLayer);
-	PassObjectsIntoLayer(Window.GetVectorWindow(), ActiveScene.Scene[0]);
+	//PassObjectsIntoLayer(Window.GetVectorWindow(), ActiveScene.Scene[0]);
 
 }
 
