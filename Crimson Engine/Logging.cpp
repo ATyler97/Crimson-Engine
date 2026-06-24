@@ -105,43 +105,43 @@ void Logging::Log(bool Debug, int message)
 		case 32:
 			std::cout << "\t\tSystem_Input | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
 			break;
-		case 31:
+		case 33:
 			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
 			break;
-		case 31:
+		case 34:
 			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
 			break;
-		case 31:
+		case 35:
 			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
 			break;
-		case 31:
+		case 36:
 			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
 			break;
-		case 31:
+		case 37:
 			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
 			break;
-		case 31:
+		case 38:
 			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
 			break;
-		case 31:
+		case 39:
 			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
 			break;
-		case 31:
+		case 40:
 			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
 			break;
-		case 31:
+		case 41:
 			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
 			break;
-		case 31:
+		case 42:
 			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
 			break;
-		case 31:
+		case 43:
 			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
 			break;
-		case 31:
+		case 44:
 			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
 			break;
-		case 31:
+		case 45:
 			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
 			break;
 		}
