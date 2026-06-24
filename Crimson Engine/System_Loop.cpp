@@ -7,9 +7,10 @@ using namespace std;
 
 vector<System_Base*> systems;
 
-void System_Loop::Start(bool* state) {
+void System_Loop::Start() {
+	State->MainSt8.Running = true;
 
-	while (state) {
+	while (State->MainSt8.Running) {
 		State->TimeSt8.CurrentTime = SDL_GetTicks64();
 		State->TimeSt8.DeltaTime = State->TimeSt8.CurrentTime - State->TimeSt8.PreviousTime;
 		State->TimeSt8.PreviousTime = State->TimeSt8.CurrentTime;
@@ -19,6 +20,10 @@ void System_Loop::Start(bool* state) {
 			systems[i]->Update();
 		}
 	}
+}
+void System_Loop::Stop()
+{
+	State->MainSt8.Running = false;
 }
 void System_Loop::InsertSystemsIntoLoop(std::vector<System_Base*> systemsVector) {
 	systems = systemsVector;

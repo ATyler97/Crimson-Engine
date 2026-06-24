@@ -1,13 +1,13 @@
 #include <SDL2/SDL.h>
 #include "GUI_Graphics_Renderer.h"
-#include "Assembly.h"
+#include "GUI_Assembly.h"
 #include "GUI_Transformations.h"
 #include "States.h"
 #include <iostream>
 #include "Application_Task.h"
 
 GUI_Scene ActiveScene = GUI_Scene();
-Assembly BW;
+GUI_Assembly BW;
 SDL_Renderer* renderer;
 States* State;
 
@@ -20,15 +20,15 @@ void GUI_Graphics_Renderer::SetState(States* state)
 {
 	State = state;
 }
-void GUI_Graphics_Renderer::AddBodyToScene(GUI_Object BodyToAdd)
+void GUI_Graphics_Renderer::AddObjectToScene(GUI_Object ObjectToAdd)
 {
-	ActiveScene.AddBodyToScene(BodyToAdd);
+	ActiveScene.AddObjectToScene(ObjectToAdd);
 
 }
-void GUI_Graphics_Renderer::AddBodiesToScene(std::vector<GUI_Object> BodyVectorToAdd)
+void GUI_Graphics_Renderer::AddObjectsToScene(std::vector<GUI_Object> ObjectVectorToAdd)
 {
-	for (int i = 0; i < BodyVectorToAdd.size(); i++) {
-		ActiveScene.AddBodyToScene(BodyVectorToAdd[i]);
+	for (int i = 0; i < ObjectVectorToAdd.size(); i++) {
+		ActiveScene.AddObjectToScene(ObjectVectorToAdd[i]);
 	}
 }
 void GUI_Graphics_Renderer::RenderObjectsToGUI(SDL_Renderer* rend)
@@ -39,42 +39,42 @@ void GUI_Graphics_Renderer::RenderObjectsToGUI(SDL_Renderer* rend)
 		DetermineShape(rend, ActiveScene.Scene[i]);
 	}
 }
-void GUI_Graphics_Renderer::DetermineShape(SDL_Renderer* rend, GUI_Object BodyToAdd)
+void GUI_Graphics_Renderer::DetermineShape(SDL_Renderer* rend, GUI_Object ObjectToAdd)
 {
-	SDL_SetRenderDrawColor(rend, BodyToAdd.Color->Red, BodyToAdd.Color->Green, BodyToAdd.Color->Blue, BodyToAdd.Visibility->Alpha);
+	SDL_SetRenderDrawColor(rend, ObjectToAdd.Color->Red, ObjectToAdd.Color->Green, ObjectToAdd.Color->Blue, ObjectToAdd.Visibility->Alpha);
 	SDL_Rect shape = SDL_Rect();
 	
-	switch (BodyToAdd.Shape->TypeOfShape) {
+	switch (ObjectToAdd.Shape->TypeOfShape) {
 	case GUI_Element_Shape::Shape_Type::Rectangle:
-		shape.w = BodyToAdd.Size->Width;
-		shape.h = BodyToAdd.Size->Height;
-		shape.x = BodyToAdd.Location->X;
-		shape.y = BodyToAdd.Location->Y;
+		shape.w = ObjectToAdd.Size->Width;
+		shape.h = ObjectToAdd.Size->Height;
+		shape.x = ObjectToAdd.Location->X;
+		shape.y = ObjectToAdd.Location->Y;
 
 		SDL_RenderDrawRect(rend, &shape);
 		break;
 	case GUI_Element_Shape::Shape_Type::Rectangle_Filled:
-		shape.w = BodyToAdd.Size->Width;
-		shape.h = BodyToAdd.Size->Height;
-		shape.x = BodyToAdd.Location->X;
-		shape.y = BodyToAdd.Location->Y;
+		shape.w = ObjectToAdd.Size->Width;
+		shape.h = ObjectToAdd.Size->Height;
+		shape.x = ObjectToAdd.Location->X;
+		shape.y = ObjectToAdd.Location->Y;
 
 		SDL_RenderFillRect(rend, &shape);
 		break;
 	case GUI_Element_Shape::Shape_Type::Line:
-		SDL_RenderDrawLine(rend, BodyToAdd.Size->Width, BodyToAdd.Size->Height, BodyToAdd.Location->X, BodyToAdd.Location->Y);
+		SDL_RenderDrawLine(rend, ObjectToAdd.Size->Width, ObjectToAdd.Size->Height, ObjectToAdd.Location->X, ObjectToAdd.Location->Y);
 		break;
 	case GUI_Element_Shape::Shape_Type::Point:
-		SDL_RenderDrawPoint(rend, BodyToAdd.Location->X, BodyToAdd.Location->Y);
+		SDL_RenderDrawPoint(rend, ObjectToAdd.Location->X, ObjectToAdd.Location->Y);
 
 		break;
 	}
 	SDL_SetRenderDrawColor(rend, 0, 0, 0, 0);
 }
 
-void GUI_Graphics_Renderer::PopulateBody()
+void GUI_Graphics_Renderer::PopulateObject()
 {
-	AddBodiesToScene(BW.GetAssembly());
+	AddObjectsToScene(BW.GetGUI_Assembly());
 }
 
 void GUI_Graphics_Renderer::Render()

@@ -17,6 +17,7 @@ struct InputState
 };
 struct MainLoop{
 	bool Running;
+	bool Debug = true;
 };
 struct TimeState {
 	int64_t CurrentTime;
@@ -44,6 +45,7 @@ struct RendererState {
 };
 struct States {
 	InputState InputSt8;
+	MainLoop MainSt8;
 	TimeState TimeSt8;
 	WindowState WindowSt8;
 	RendererState RenderSt8;

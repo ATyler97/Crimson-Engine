@@ -141,7 +141,7 @@
   <ItemGroup>
     <ClInclude Include="Application.h" />
     <ClInclude Include="Graphics_Task.h" />
-    <ClInclude Include="Assembly.h" />
+    <ClInclude Include="GUI_Assembly.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="Comp_Gravity.h" />
     <ClInclude Include="Comp_LocalVertices3D.h" />
@@ -157,6 +157,7 @@
     <ClInclude Include="GUI_Graphics_Renderer.h" />
     <ClInclude Include="GUI_Scene.h" />
     <ClInclude Include="GUI_Transformations.h" />
+    <ClInclude Include="Logging.h" />
     <ClInclude Include="MouseMath.h" />
     <ClInclude Include="States.h" />
     <ClInclude Include="System_EventManager.h" />
@@ -179,7 +180,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
-    <ClCompile Include="Assembly.cpp" />
+    <ClCompile Include="GUI_Assembly.cpp" />
     <ClCompile Include="Comp_LocalVertices2D.h" />
     <ClCompile Include="Comp_NormalForce.h" />
     <ClCompile Include="Comp_XVelocity.h" />
@@ -187,6 +188,7 @@
     <ClCompile Include="GUI_Element_Clickable.h" />
     <ClCompile Include="GUI_Graphics_Renderer.cpp" />
     <ClCompile Include="GUI_Transformations.cpp" />
+    <ClCompile Include="Logging.cpp" />
     <ClCompile Include="MouseMath.cpp" />
     <ClCompile Include="States.cpp" />
     <ClCompile Include="System_EventManager.cpp" />

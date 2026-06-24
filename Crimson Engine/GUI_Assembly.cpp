@@ -1,36 +1,36 @@
-#include "Assembly.h"
+#include "GUI_Assembly.h"
 #include "Object.h"
 
 
 std::vector<GUI_Object> window = std::vector<GUI_Object>();
 
-Assembly::Assembly()
+GUI_Assembly::GUI_Assembly()
 {
-	InstanceAssembly();
+	InstanceGUI_Assembly();
 }
-std::vector<GUI_Object> Assembly::GetAssembly()
+std::vector<GUI_Object> GUI_Assembly::GetGUI_Assembly()
 {
 	return window;
 }
 
-void Assembly::InstanceAssembly()
+void GUI_Assembly::InstanceGUI_Assembly()
 {
 	//std::vector<GUI_Object> Window;
 
 
-	GUI_Object Body = GUI_Object();
+	GUI_Object Object = GUI_Object();
 	GUI_Object TopBar = GUI_Object();
 	GUI_Object Exit = GUI_Object();
 	GUI_Object SliderBar = GUI_Object();
 	GUI_Object Slider = GUI_Object();
 
-	Body.Color = GUI_Element_Color(25, 25, 25, 0);
-	Body.Location = GUI_Element_Location(0, 0);
-	Body.Size = GUI_Element_Size(640, 480);
-	Body.Shape = GUI_Element_Shape(GUI_Element_Shape::Shape_Type::Rectangle_Filled);
-	Body.Visibility = GUI_Element_Visibility(255);
-	Body.Clickable = GUI_Element_Clickable(false);
-	window.push_back(Body);
+	Object.Color = GUI_Element_Color(25, 25, 25, 0);
+	Object.Location = GUI_Element_Location(0, 0);
+	Object.Size = GUI_Element_Size(640, 480);
+	Object.Shape = GUI_Element_Shape(GUI_Element_Shape::Shape_Type::Rectangle_Filled);
+	Object.Visibility = GUI_Element_Visibility(255);
+	Object.Clickable = GUI_Element_Clickable(false);
+	window.push_back(Object);
 
 	TopBar.Color = GUI_Element_Color(221, 96, 49, 0);
 	TopBar.Location = GUI_Element_Location(0, 0);
@@ -70,7 +70,7 @@ void Assembly::InstanceAssembly()
 	//window = Window;
 }
 
-void Assembly::Move(int x, int y)
+void GUI_Assembly::Move(int x, int y)
 {
 	for (int i = 0; i < window.size();i++) {
 		window[i].Location->X = window[i].Location->X + x;
@@ -81,11 +81,11 @@ void Assembly::Move(int x, int y)
 	}
 }
 
-void Assembly::IsMouseOverClickable(int MouseX, int MouseY)
+void GUI_Assembly::IsMouseOverClickable(int MouseX, int MouseY)
 {
 
 }
-void Assembly::IsMouseOverWindow(int MouseX, int MouseY) {
+void GUI_Assembly::IsMouseOverWindow(int MouseX, int MouseY) {
 
 }
 

@@ -6,6 +6,6 @@ struct GUI_Scene
 {
 	std::vector <GUI_Object> Scene;
 
-	void AddBodyToScene(GUI_Object BodyToAdd) { Scene.push_back(BodyToAdd); };
-	int GetNumberOfBodies() { return Scene.size(); }
+	void AddObjectToScene(GUI_Object ObjectToAdd) { Scene.push_back(ObjectToAdd); };
+	int GetNumberOfObjects() { return Scene.size(); }
 };

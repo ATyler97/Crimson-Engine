@@ -7,7 +7,7 @@
 class SystemManager
 {
 public:
-	void InitializeSystems(Settings* gameSettings, bool* LoopStateptr);
+	void InitializeSystems(Settings* gameSettings);
 	System_Loop* ReturnLoop();
 	std::vector <System_Base*> ReturnSystems();
 

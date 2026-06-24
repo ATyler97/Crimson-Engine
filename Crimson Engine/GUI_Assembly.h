@@ -3,12 +3,12 @@
 #include <optional>
 #include "Object.h"
 
-struct Assembly 
+struct GUI_Assembly 
 {
-	Assembly();
-	std::vector<GUI_Object> GetAssembly();
+	GUI_Assembly();
+	std::vector<GUI_Object> GetGUI_Assembly();
 
-	static void InstanceAssembly();
+	static void InstanceGUI_Assembly();
 	void Move(int x, int y);
 	void IsMouseOverClickable(int MouseX, int MouseY);
 	void IsMouseOverWindow(int MouseX, int MouseY);

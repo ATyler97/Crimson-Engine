@@ -1,6 +1,6 @@
 #pragma once
 #include "GUI_Transformations.h"
-#include "Assembly.h"
+#include "GUI_Assembly.h"
 #include <vector>
 class GUI_Transformations
 {

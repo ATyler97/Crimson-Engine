@@ -3,10 +3,11 @@
 #include <SDL2/SDL.h>
 #include "vector"
 #include "ObjectProcessor.h"
+#include "Logging.h"
 
 void System_Input::Initialize()
 {
-
+	Logging::Log(State->MainSt8.Debug, 32);
 }
 void System_Input::Update()
 {

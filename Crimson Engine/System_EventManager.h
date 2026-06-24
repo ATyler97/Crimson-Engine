@@ -8,8 +8,8 @@
 class System_EventManager : public System_Base
 {
 	public:
-		void Initialize(bool* LoopState, System_Input* Inptr);
 		void CheckEvents();
+		void Initialize(System_Input* Inptr);
 		void Update() override;
 };
 

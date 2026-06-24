@@ -70,7 +70,7 @@
     <Filter Include="Engine\Tasks">
       <UniqueIdentifier>{3c7ca1b6-6e3e-4ee2-a2dc-941def49c434}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Graphics\GUI Graphics\Assembly">
+    <Filter Include="Engine\Graphics\GUI Graphics\GUI_Assembly">
       <UniqueIdentifier>{f0e67ea3-5285-4be5-ac7a-f33c2d621a3c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -135,8 +135,8 @@
     <ClInclude Include="GUI_Object.h">
       <Filter>Engine\Graphics\GUI Graphics\GUI_Object</Filter>
     </ClInclude>
-    <ClInclude Include="Assembly.h">
-      <Filter>Engine\Graphics\GUI Graphics\Assembly</Filter>
+    <ClInclude Include="GUI_Assembly.h">
+      <Filter>Engine\Graphics\GUI Graphics\GUI_Assembly</Filter>
     </ClInclude>
     <ClInclude Include="GUI_Element.h">
       <Filter>Engine\Graphics\GUI Graphics\GUI_Elements</Filter>
@@ -185,6 +185,9 @@
     </ClInclude>
     <ClInclude Include="System_Task.h">
       <Filter>Engine\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="Logging.h">
+      <Filter>Engine\Engine Foundation\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -236,8 +239,8 @@
     <ClCompile Include="Settings.cpp">
       <Filter>Engine\Engine Foundation\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Assembly.cpp">
-      <Filter>Engine\Graphics\GUI Graphics\Assembly</Filter>
+    <ClCompile Include="GUI_Assembly.cpp">
+      <Filter>Engine\Graphics\GUI Graphics\GUI_Assembly</Filter>
     </ClCompile>
     <ClCompile Include="GUI_Graphics_Renderer.cpp">
       <Filter>Engine\Graphics\GUI Graphics</Filter>
@@ -259,6 +262,9 @@
     </ClCompile>
     <ClCompile Include="System_Task.cpp">
       <Filter>Engine\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="Logging.cpp">
+      <Filter>Engine\Engine Foundation\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

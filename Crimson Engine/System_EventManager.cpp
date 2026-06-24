@@ -2,18 +2,18 @@
 #include "System_Input.h"
 #include <iostream>;
 #include <SDL2/SDL.h>
-bool* stateptr;
+#include "Logging.h"
+
 System_Input* Inputptr;
 
-void System_EventManager::Initialize(bool* LoopState, System_Input* Inptr)
+void System_EventManager::Initialize(System_Input* Inptr)
 {
-	std::cout << "\t\tEvent Manager System | Initialize() | 'Event Manager System Initalizing" << std::endl;
-	stateptr = LoopState;
+	Logging::Log(State->MainSt8.Debug, 10);
 	Inputptr = Inptr;
 }
 void System_EventManager::Update() 
 {
-	std::cout << "\t\tEvent Manager System | Update() | 'Checking for Updates" << std::endl;
+	Logging::Log(State->MainSt8.Debug, 11);
 	CheckEvents();
 }
 void System_EventManager::CheckEvents() {
@@ -22,54 +22,55 @@ void System_EventManager::CheckEvents() {
 	{
 		switch (event.type) {
 		case SDL_QUIT:
-			*stateptr = false;
-			std::cout << "\t\tEvent Manager System | CheckEvents() | SDL_QUIT | Ending loop" << std::endl;
+			Logging::Log(State->MainSt8.Debug, 12);
+			State->MainSt8.Running = false;
 			break;
 
 		case SDL_WINDOWEVENT:
-			std::cout << "\t\tEvent Manager System | CheckEvents() | SDL_WINDOWEVENT | Windows event Triggered" << std::endl;
+			Logging::Log(State->MainSt8.Debug, 13);
 			break;
 		case SDL_SYSWMEVENT:
-			std::cout << "\t\tEvent Manager System | CheckEvents() | SDL_SYSWMEVENT | System Event Triggered" << std::endl;
+			Logging::Log(State->MainSt8.Debug, 14);
 			break;
 		case SDL_KEYDOWN:
-			std::cout << "\t\tEvent Manager System | CheckEvents() | SDL_KEYDOWN | Key Pressed Event" << std::endl;
+			Logging::Log(State->MainSt8.Debug, 15);
 			Inputptr->KeyPressed(event.key.keysym);
 			break;
 		case SDL_KEYUP:
-			std::cout << "\t\tEvent Manager System | CheckEvents() | SDL_KEYUP | Key Released Event" << std::endl;
+			Logging::Log(State->MainSt8.Debug, 16);
 			Inputptr->KeyPressed(event.key.keysym);
 			break;
 		case SDL_TEXTEDITING:
-			std::cout << "\t\tEvent Manager System | CheckEvents() | SDL_TEXTEDITING | Text being edited" << std::endl;
+			Logging::Log(State->MainSt8.Debug, 17);
 			break;
 		case SDL_TEXTINPUT:
-			std::cout << "\t\tEvent Manager System | CheckEvents() | SDL_TEXTINPUT | Text being input" << std::endl;
+			Logging::Log(State->MainSt8.Debug, 18);
 			break;
 		case SDL_MOUSEMOTION:
-			std::cout << "\t\tEvent Manager System | CheckEvents() | SDL_MOUSEMOTION | Mouse move event" << std::endl;
+			Logging::Log(State->MainSt8.Debug, 19);
 			Inputptr->MouseMoved(event.motion);
 			break;
 		case SDL_MOUSEBUTTONDOWN:
-			std::cout << "\t\tEvent Manager System | CheckEvents() | SDL_MOUSEBUTTONDOWN | Mousebutton down" << std::endl;
+			Logging::Log(State->MainSt8.Debug, 20);
 			Inputptr->MouseButtonPressed(event.button);
 			break;
 		case SDL_MOUSEBUTTONUP:
-			std::cout << "\t\tEvent Manager System | CheckEvents() | SDL_MOUSEBUTTONUP | MouseButton up " << std::endl;
+			Logging::Log(State->MainSt8.Debug, 21);
 			Inputptr->MouseButtonReleased(event.button);
 			break;
 		case SDL_MOUSEWHEEL:
-			std::cout << "\t\tEvent Manager System | CheckEvents() | SDL_MOUSEWHEEL | Mouse wheel" << std::endl;
+			Logging::Log(State->MainSt8.Debug, 22);
 			Inputptr->MouseWheel(event.wheel);
 			break;
 		case SDL_RENDER_TARGETS_RESET:
-			std::cout << "\t\tEvent Manager System | CheckEvents() | SDL_RENDER_TARGETS_RESET | Render Target Reset" << std::endl;
+			Logging::Log(State->MainSt8.Debug, 23);
 			break;
 		case SDL_RENDER_DEVICE_RESET:
-			std::cout << "\t\tEvent Manager System | CheckEvents() | SDL_RENDER_DEVICE_RESET | Render Divice Reset" << std::endl;
+			Logging::Log(State->MainSt8.Debug, 24);
 			break;
 		default:
-			std::cout << "\t\tEvent Manager System | CheckEvents() | 'Event Unidentified' \t\t<--ERROR-->" << std::endl;
+			Logging::Log(State->MainSt8.Debug, 25);
+			State->MainSt8.Running = false;
 			break;
 		}
 	}
