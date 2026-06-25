@@ -103,46 +103,67 @@ void Logging::Log(bool Debug, int message)
 			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
 			break;
 		case 32:
-			std::cout << "\t\tSystem_Input | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
+			std::cout << "\t\tSystem_Input | Initialize() | 'Initializing System_Input' " << std::endl;
 			break;
 		case 33:
-			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
+			std::cout << "\t\tSystem_Input | Update() | 'Updating' " << std::endl;
 			break;
 		case 34:
-			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
+			std::cout << "\t\tSystem_Input | ProcessInput() | Triggering process from key press " << std::endl;
 			break;
 		case 35:
-			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
+			std::cout << "\t\tSystem_Input | KeyReleased() | Setting KeyPressed to false " << std::endl;
 			break;
 		case 36:
-			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
+			std::cout << "\t\tSystem_Input | MouseMoved() | Setting mouse location " << std::endl;
 			break;
 		case 37:
-			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
+			std::cout << "\t\tSystem_Input | MouseButtonPressed() | Left Mouse Button Clicked " << std::endl;
 			break;
 		case 38:
-			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
+			std::cout << "\t\tSystem_Input | MouseButtonPressed() | Middle Mouse Button Clicked " << std::endl;
 			break;
 		case 39:
-			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
+			std::cout << "\t\tSystem_Input | MouseButtonPressed() | Middle Mouse Button Clicked " << std::endl;
 			break;
 		case 40:
-			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
+			std::cout << "\t\tSystem_Input | MouseButtonReleased() | Left Mouse Button Released " << std::endl;
 			break;
 		case 41:
-			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
+			std::cout << "\t\tSystem_Input | MouseButtonReleased() | Middle Mouse Button Released " << std::endl;
 			break;
 		case 42:
-			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
+			std::cout << "\t\tSystem_Input | MouseButtonReleased() | Middle Mouse Button Released " << std::endl;
 			break;
 		case 43:
-			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
+			std::cout << "\t\tSystem_Input | MouseWheel() | Mouse Wheel Scrolled " << std::endl;
 			break;
 		case 44:
-			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
+			std::cout << "\t\tSystem_Input | KeyPressed() | key has been pressed " << std::endl;
 			break;
 		case 45:
-			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
+			std::cout << "\t\tSystem_Logic | Initialize() | 'Initializing Logic System' " << std::endl;
+			break;
+		case 46:
+			std::cout << "\t\tSystem_Logic | Update() | 'Updating Logic System' " << std::endl;
+			break;
+		case 47:
+			std::cout << "\t\tSystem_Sound | Initialize() | 'Initializing Sound system' " << std::endl;
+			break;
+		case 48:
+			std::cout << "\t\tSystem_Sound | Update() | 'Updating Sound system' " << std::endl;
+			break;
+		case 49:
+			std::cout << "\t\tSystem_Loop | Start() | Starting Engine loop " << std::endl;
+			break;
+		case 50:
+			std::cout << "\t\tSystem_Loop | Stop() | Stopping Engine loop " << std::endl;
+			break;
+		case 51:
+			std::cout << "\t\tSystem_Loop | InsertSystemsIntoLoop() | Receiving Systems " << std::endl;
+			break;
+		case 52:
+			std::cout << "\t\t" << std::endl;
 			break;
 		}
 

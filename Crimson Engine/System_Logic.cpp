@@ -1,15 +1,15 @@
 #include "System_Logic.h"
 #include <iostream>
+#include "Logging.h"
 
 #include <SDL2/SDL.h>
 
 void System_Logic::Initialize() {
 	// Initialize the logic system
-	std::cout << "\t\tLogic System | Initialize() | 'Initializing Logic System' " << std::endl;
+	Logging::Log(State->MainSt8.Debug, 45);
 }
 
 void System_Logic::Update() {
-	std::cout << "\t\tLogic System | Update() | 'Updating Logic System' " << std::endl;
-	
+	Logging::Log(State->MainSt8.Debug, 46);
 }
 
