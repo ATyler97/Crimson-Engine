@@ -21,5 +21,7 @@ struct GUI_Object
 	std::optional<GUI_Element_Visibility> Visibility;
 	std::optional<GUI_Element_EventArea> EventArea;
 	std::optional<GUI_Element_Clickable> Clickable;
+	bool MouseOver(int X, int Y);
+	void DetermineShape();
 
 };

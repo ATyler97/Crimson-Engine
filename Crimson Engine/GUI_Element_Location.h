@@ -10,4 +10,6 @@ struct GUI_Element_Location : public GUI_Element
 		X = X_Coord;
 		Y = Y_Coord;
 	};
+	int32_t GetXpos() { return X; };
+	int32_t GetYpos() { return Y; };
 };

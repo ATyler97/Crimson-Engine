@@ -34,9 +34,6 @@
     <Filter Include="Engine\Graphics\GUI Graphics\GUI_Scene">
       <UniqueIdentifier>{febf0691-374d-4b7f-9059-26b7e4a7eb6f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Graphics\GUI Graphics\GUI_Scene\GUI_Scene_Prefab">
-      <UniqueIdentifier>{3846d532-f843-4223-a251-eae35889a3ff}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine\States">
       <UniqueIdentifier>{0941fb34-a578-4732-97a2-9a1a2e2ec879}</UniqueIdentifier>
     </Filter>
@@ -189,6 +186,9 @@
     <ClInclude Include="Logging.h">
       <Filter>Engine\Engine Foundation\Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="GUI_Logic.h">
+      <Filter>Engine\Graphics\GUI Graphics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Comp_NormalForce.h">
@@ -245,9 +245,6 @@
     <ClCompile Include="GUI_Graphics_Renderer.cpp">
       <Filter>Engine\Graphics\GUI Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="States.cpp">
-      <Filter>Engine\States</Filter>
-    </ClCompile>
     <ClCompile Include="GUI_Element_Clickable.h">
       <Filter>Engine\Graphics\GUI Graphics\GUI_Elements</Filter>
     </ClCompile>
@@ -265,6 +262,18 @@
     </ClCompile>
     <ClCompile Include="Logging.cpp">
       <Filter>Engine\Engine Foundation\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI_Object.cpp">
+      <Filter>Engine\Graphics\GUI Graphics\GUI_Object</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI_Logic.cpp">
+      <Filter>Engine\Graphics\GUI Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI_Scene.cpp">
+      <Filter>Engine\Graphics\GUI Graphics\GUI_Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI_Element_Shape.cpp">
+      <Filter>Engine\Graphics\GUI Graphics\GUI_Elements</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

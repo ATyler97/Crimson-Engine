@@ -1,4 +1,4 @@
-#include "System_Graphics.h"
+                                                                                                                                                                    #include "System_Graphics.h"
 #include "GUI_Layer.h"
 #include "GUI_Base_Window.h"
 #include <SDL2/SDL.h>
@@ -7,6 +7,7 @@
 #include "GUI_Graphics_Renderer.h"
 #include "Logging.h"
 
+
 int WindowWidth = 1920;
 int WindowHeight = 1200;
 const char* Title = "Default Title";
@@ -14,6 +15,7 @@ SDL_Window* window;
 SDL_Renderer* GUIRendererPtr;
 Settings* gameSettings;
 GUI_Graphics_Renderer GUIGraphicsRender = GUI_Graphics_Renderer();
+
 
 void System_Graphics::Initialize(Settings* GameSettings)
 {
@@ -36,19 +38,18 @@ void System_Graphics::DrawWindow()
 }
 void System_Graphics::DrawFrame() {
 	Logging::Log(State->MainSt8.Debug, 29);
+	SDL_RenderClear(GUIRendererPtr);
 
 	// this methood will have alot of shit to do when it comes to what to draw. 
 	ProcessLayers();
+	
+	GUIGraphicsRender.RenderObjectsToGUI(GUIRendererPtr);
+	SDL_RenderPresent(GUIRendererPtr);
 }
 void System_Graphics::ProcessLayers() 
 {
 	Logging::Log(State->MainSt8.Debug, 30);
-	SDL_RenderClear(GUIRendererPtr);
-
-	GUIGraphicsRender.RenderObjectsToGUI(GUIRendererPtr);
-
-	SDL_RenderPresent(GUIRendererPtr);
-	//SDL_Delay(10000);
+	
 }
 void System_Graphics::InitializeRenderer()
 {

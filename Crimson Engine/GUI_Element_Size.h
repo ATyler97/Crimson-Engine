@@ -10,4 +10,6 @@ struct GUI_Element_Size : public GUI_Element
 		Width = W;
 		Height = H;
 	};
+	int GetWidth() { return Width; };
+	int GetHeight() { return Height; };
 };

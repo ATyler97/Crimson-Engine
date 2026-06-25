@@ -109,7 +109,7 @@ void Logging::Log(bool Debug, int message)
 			std::cout << "\t\tSystem_Input | Update() | 'Updating' " << std::endl;
 			break;
 		case 34:
-			std::cout << "\t\tSystem_Input | ProcessInput() | Triggering process from key press " << std::endl;
+			std::cout << "\t\tSystem_Input | ProcessMouseInput() | Triggering process from mouse press " << std::endl;
 			break;
 		case 35:
 			std::cout << "\t\tSystem_Input | KeyReleased() | Setting KeyPressed to false " << std::endl;

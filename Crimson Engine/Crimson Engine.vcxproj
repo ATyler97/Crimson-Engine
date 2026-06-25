@@ -147,6 +147,7 @@
     <ClInclude Include="Comp_LocalVertices3D.h" />
     <ClInclude Include="Comp_Weight.h" />
     <ClInclude Include="Comp_ZVelocity.h" />
+    <ClInclude Include="GUI_Logic.h" />
     <ClInclude Include="GUI_Object.h" />
     <ClInclude Include="GUI_Element.h" />
     <ClInclude Include="GUI_Element_Color.h" />
@@ -186,11 +187,14 @@
     <ClCompile Include="Comp_XVelocity.h" />
     <ClCompile Include="Comp_YVelocity.h" />
     <ClCompile Include="GUI_Element_Clickable.h" />
+    <ClCompile Include="GUI_Element_Shape.cpp" />
     <ClCompile Include="GUI_Graphics_Renderer.cpp" />
+    <ClCompile Include="GUI_Logic.cpp" />
+    <ClCompile Include="GUI_Object.cpp" />
+    <ClCompile Include="GUI_Scene.cpp" />
     <ClCompile Include="GUI_Transformations.cpp" />
     <ClCompile Include="Logging.cpp" />
     <ClCompile Include="MouseMath.cpp" />
-    <ClCompile Include="States.cpp" />
     <ClCompile Include="System_EventManager.cpp" />
     <ClCompile Include="System_Graphics.cpp" />
     <ClCompile Include="System_Input.cpp" />

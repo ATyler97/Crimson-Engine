@@ -12,11 +12,6 @@ void System_Input::Initialize()
 void System_Input::Update()
 {
 	Logging::Log(State->MainSt8.Debug, 33);
-	ProcessInput();
-}
-void System_Input::ProcessInput() 
-{
-	Logging::Log(State->MainSt8.Debug, 34);
 }
 void System_Input::KeyReleased(SDL_Keysym Key)
 {

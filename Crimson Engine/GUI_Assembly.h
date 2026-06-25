@@ -6,10 +6,9 @@
 struct GUI_Assembly 
 {
 	GUI_Assembly();
-	std::vector<GUI_Object> GetGUI_Assembly();
-
+	std::vector<GUI_Object> GetAssembly();
 	static void InstanceGUI_Assembly();
+	std::vector<GUI_Object> GetObjects();
 	void Move(int x, int y);
-	void IsMouseOverClickable(int MouseX, int MouseY);
-	void IsMouseOverWindow(int MouseX, int MouseY);
+	bool IsMouseOverClickable(int MouseX, int MouseY);
 };

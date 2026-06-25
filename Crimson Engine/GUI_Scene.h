@@ -2,10 +2,10 @@
 #include <vector>;
 #include "GUI_Layer.h"
 #include "GUI_Object.h"
+#include "GUI_Assembly.h"
 struct GUI_Scene
 {
-	std::vector <GUI_Object> Scene;
+	std::vector <GUI_Assembly> Scene;
 
-	void AddObjectToScene(GUI_Object ObjectToAdd) { Scene.push_back(ObjectToAdd); };
-	int GetNumberOfObjects() { return Scene.size(); }
+	void AddAssemblyToScene(GUI_Assembly AssemblyToAdd);
 };
