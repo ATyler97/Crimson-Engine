@@ -9,6 +9,7 @@ struct GUI_Assembly
 	std::vector<GUI_Object> GetAssembly();
 	static void InstanceGUI_Assembly();
 	std::vector<GUI_Object> GetObjects();
+	static void InitalizeAssemblyShape();
 	void Move(int x, int y);
 	bool IsMouseOverClickable(int MouseX, int MouseY);
 };

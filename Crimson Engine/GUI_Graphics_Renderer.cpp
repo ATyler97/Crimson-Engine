@@ -47,13 +47,28 @@ void GUI_Graphics_Renderer::Render()
 			switch (ActiveScene.Scene[i].GetObjects()[j].Shape->TypeOfShape) 
 			{
 				case GUI_Element_Shape::Shape_Type::Rectangle:
+					SDL_SetRenderDrawColor(renderer,
+						ActiveScene.Scene[i].GetObjects()[j].Color->Red,
+						ActiveScene.Scene[i].GetObjects()[j].Color->Green,
+						ActiveScene.Scene[i].GetObjects()[j].Color->Blue,
+						ActiveScene.Scene[i].GetObjects()[j].Color->Alpha);
 					SDL_RenderDrawRect(renderer, &ActiveScene.Scene[i].GetObjects()[j].Shape->Rect);
 					//gotta add the color 4head
 					break;
 				case GUI_Element_Shape::Shape_Type::Rectangle_Filled:
+					SDL_SetRenderDrawColor(renderer,
+						ActiveScene.Scene[i].GetObjects()[j].Color->Red,
+						ActiveScene.Scene[i].GetObjects()[j].Color->Green,
+						ActiveScene.Scene[i].GetObjects()[j].Color->Blue,
+						ActiveScene.Scene[i].GetObjects()[j].Color->Alpha);
 					SDL_RenderFillRect(renderer, &ActiveScene.Scene[i].GetObjects()[j].Shape->Rect);
 					break;
 				case GUI_Element_Shape::Shape_Type::Line:
+					SDL_SetRenderDrawColor(renderer,
+						ActiveScene.Scene[i].GetObjects()[j].Color->Red,
+						ActiveScene.Scene[i].GetObjects()[j].Color->Green,
+						ActiveScene.Scene[i].GetObjects()[j].Color->Blue,
+						ActiveScene.Scene[i].GetObjects()[j].Color->Alpha);
 					SDL_RenderDrawLine
 					(renderer,
 						ActiveScene.Scene[i].GetObjects()[j].Location->X,
@@ -62,6 +77,11 @@ void GUI_Graphics_Renderer::Render()
 						ActiveScene.Scene[i].GetObjects()[j].Size->Height);
 					break;
 				case GUI_Element_Shape::Shape_Type::Point:
+					SDL_SetRenderDrawColor(renderer,
+						ActiveScene.Scene[i].GetObjects()[j].Color->Red,
+						ActiveScene.Scene[i].GetObjects()[j].Color->Green,
+						ActiveScene.Scene[i].GetObjects()[j].Color->Blue,
+						ActiveScene.Scene[i].GetObjects()[j].Color->Alpha);
 					SDL_RenderDrawPoint(
 						renderer,
 						ActiveScene.Scene[i].GetObjects()[j].Location->X,

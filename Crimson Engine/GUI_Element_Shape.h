@@ -22,5 +22,10 @@ struct GUI_Element_Shape : public GUI_Element
 		TypeOfElement = Shape;
 
 	}
-	
+	void SetRectParameters(int x, int y, int w, int h) {
+		Rect.x = x;
+		Rect.y = y;
+		Rect.w = w;
+		Rect.h = h;
+	}
 };

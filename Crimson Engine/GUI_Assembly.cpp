@@ -65,11 +65,21 @@ void GUI_Assembly::InstanceGUI_Assembly()
 	Slider.EventArea = GUI_Element_EventArea(Slider.Size->Height, Slider.Size->Width, Slider.Location->X, Slider.Location->Y);
 	Slider.Clickable = GUI_Element_Clickable(false);
 	Objects.push_back(Slider);
+	InitalizeAssemblyShape();
 
 }
 
 std::vector<GUI_Object> GUI_Assembly::GetObjects() {
 	return Objects;
+}
+void GUI_Assembly::InitalizeAssemblyShape() {
+	for (int i = 0; i < Objects.size(); i++) 
+	{
+		Objects[i].Shape->Rect.x = Objects[i].Location->X;
+		Objects[i].Shape->Rect.y = Objects[i].Location->Y;
+		Objects[i].Shape->Rect.w = Objects[i].Size->Width; 
+		Objects[i].Shape->Rect.h = Objects[i].Size->Height;
+	}
 }
 void GUI_Assembly::Move(int x, int y)
 {
