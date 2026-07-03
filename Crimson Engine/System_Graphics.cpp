@@ -39,12 +39,10 @@ void System_Graphics::DrawWindow()
 }
 void System_Graphics::DrawFrame() {
 	Logging::Log(State->MainSt8.Debug, 29);
-	SDL_RenderClear(GUIRendererPtr);
 	SDL_SetRenderDrawColor(GUIRendererPtr, 0, 0, 0, 256);
-
+	SDL_RenderClear(GUIRendererPtr);
 	// this methood will have alot of shit to do when it comes to what to draw. 
-	ProcessLayers();
-	
+	//ProcessLayers();
 	GUIGraphicsRender.RenderObjectsToGUI(GUIRendererPtr);
 	SDL_RenderPresent(GUIRendererPtr);
 }

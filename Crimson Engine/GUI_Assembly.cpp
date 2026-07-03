@@ -3,6 +3,8 @@
 
 
 std::vector<GUI_Object> Objects = std::vector<GUI_Object>();
+int orginX = 0;
+int orginY = 0;
 
 GUI_Assembly::GUI_Assembly()
 {
@@ -81,15 +83,21 @@ void GUI_Assembly::InitalizeAssemblyShape() {
 		Objects[i].Shape->Rect.h = Objects[i].Size->Height;
 	}
 }
+//Eventually will need to be in an assembly transform class that handles these sorts of operations.
 void GUI_Assembly::Move(int x, int y)
 {
+	orginX = x;
+	orginY = y;
+	
 	for (int i = 0; i < Objects.size();i++) {
-		Objects[i].Location->X = Objects[i].Location->X + x;
-		Objects[i].Location->Y = Objects[i].Location->Y + y;
 
-		Objects[i].Size->Width = Objects[i].Size->Width + x;
-		Objects[i].Size->Width = Objects[i].Size->Height + y;
+		Objects[i].Shape->Rect.x = Objects[i].Location->X + orginX;
+		Objects[i].Shape->Rect.y = Objects[i].Location->Y + orginY;
+
 	}
+
+	orginX = 0;
+	orginY = 0;
 }
 
 bool GUI_Assembly::IsMouseOverClickable(int MouseX, int MouseY)

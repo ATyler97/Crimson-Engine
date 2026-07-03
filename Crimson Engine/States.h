@@ -6,9 +6,9 @@ struct InputState
 {
 	bool KEYS[322];
 	bool* KEYSPtr = KEYS;
-	bool LeftMouseButton = false;
-	bool RightMouseButton = false;
-	bool MiddleMouseButton = false;
+	bool LeftMouseButton;
+	bool RightMouseButton;
+	bool MiddleMouseButton;
 	int32_t MouseXpos;
 	int32_t MouseXOld;
 	int32_t MouseYpos;

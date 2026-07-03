@@ -27,24 +27,12 @@ void GUI_Transformations::ScaleObjectAxis(GUI_Object* obj, float scaleFactor,cha
 
 }
 
-void GUI_Transformations::MoveObject(std::vector<GUI_Object*> obj,const char TypeOfAxis, int NewLocation)
+void GUI_Transformations::MoveTo(std::vector<GUI_Object*> obj)
 {
-	for (int i = 0; i < obj.size(); i++) 
-	{
-		if (TypeOfAxis == 'X') {
-			obj[i]->Location->X = NewLocation;
-		}
-		if (TypeOfAxis == 'Y') {
-			obj[i]->Location->Y = NewLocation;
-		}
-		if (TypeOfAxis == 'Z') {
-			//obj->Location->Z = NewLocation;
-		}
-		else {
 
-		}
-	}
 }
+void GUI_Transformations::MoveBy(std::vector<GUI_Object*> obj)
+{}
 
 void GUI_Transformations::ScaleObject(std::vector<GUI_Object*> obj, float scaleFactor)
 {

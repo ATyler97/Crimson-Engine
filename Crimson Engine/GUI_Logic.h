@@ -12,6 +12,7 @@ class GUI_Logic
 {
 public:
 	GUI_Logic();
+	void Check();
 	void SetState(States* state);
 	void SetActiveScene(GUI_Scene* AScene);
 	void MouseClicked();

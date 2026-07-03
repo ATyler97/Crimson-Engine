@@ -97,7 +97,7 @@ void Logging::Log(bool Debug, int message)
 			std::cout << "\t\tSystem_Graphics | DrawFrame() | 'Drawing Frame' " << std::endl;
 			break;
 		case 30:
-			std::cout << "\t\tSystem_Graphics | ProcessLayers() | 'Clearing Renderer, rendering objects, presenting render' " << std::endl;
+			std::cout << "\t\tSystem_Graphics | ProcessLayers() | 'Doing nothing currently' " << std::endl;
 			break;
 		case 31:
 			std::cout << "\t\tSystem_Graphics | InitializeRenderer() | 'Initializing Renderer' " << std::endl;
@@ -164,6 +164,12 @@ void Logging::Log(bool Debug, int message)
 			break;
 		case 52:
 			std::cout << "\t\t" << std::endl;
+			break;
+		case 53:
+			std::cout << "\t\tSystem_Graphics | DrawFrame() | GUI_Graphics_Renderer | GUI_Logic | GUI_Check() | Checking to see if elements need to be changed " << std::endl;
+			break; 
+		case 54:
+			std::cout << "\t\tSystem_Graphics | DrawFrame() | GUI_Graphics_Renderer | GUI_Logic | MouseClicked() | If Left mouse button is pressed then move seen elements to mouse pos " << std::endl;
 			break;
 		}
 

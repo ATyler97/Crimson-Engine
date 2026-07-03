@@ -12,6 +12,7 @@ class GUI_Graphics_Renderer
 {
 	public:
 		GUI_Graphics_Renderer();
+		void initializeGUI_Logic();
 		void SetState(States* state);
 		void AddAssemblyToScene();
 		void AddAssemblyToScene(GUI_Assembly Assem);

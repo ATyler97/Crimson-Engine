@@ -18,13 +18,18 @@ GUI_Logic GuiLogic = GUI_Logic();
 
 GUI_Graphics_Renderer::GUI_Graphics_Renderer()
 {
+	ActiveScenePtr = &ActiveScene;
+	AddAssemblyToScene();
+}
+void GUI_Graphics_Renderer::initializeGUI_Logic() {
 	GuiLogic.SetState(State);
 	GuiLogic.SetActiveScene(ActiveScenePtr);
-	AddAssemblyToScene();
 }
 void GUI_Graphics_Renderer::SetState(States* state)
 {
 	State = state;
+	GuiLogic.SetState(State);
+	initializeGUI_Logic(); //not great but not terrible
 }
 void GUI_Graphics_Renderer::AddAssemblyToScene() 
 {
@@ -37,6 +42,7 @@ void GUI_Graphics_Renderer::AddAssemblyToScene(GUI_Assembly Assem)
 void GUI_Graphics_Renderer::RenderObjectsToGUI(SDL_Renderer* rend)
 {
 	renderer = rend;
+	GuiLogic.Check();
 	Render();
 }
 void GUI_Graphics_Renderer::Render()

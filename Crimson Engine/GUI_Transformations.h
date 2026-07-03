@@ -12,7 +12,9 @@ class GUI_Transformations
 
 		void ScaleObjectAxis(GUI_Object* obj, float scaleFactor,char TypeOfAxis);
 
-		void MoveObject(std::vector<GUI_Object*> obj,char TypeOfAxis, int NewLocation);
+		void MoveTo(std::vector<GUI_Object*> obj);
+
+		void MoveBy(std::vector<GUI_Object*> obj);
 
 		void ScaleObject(std::vector<GUI_Object*> obj, float scaleFactor);
 
